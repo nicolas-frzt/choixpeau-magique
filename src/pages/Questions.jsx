@@ -1,13 +1,7 @@
 import { useState } from "react";
-import NavBar from "../components/NavBar";
-import Accueil from "./Accueil";
-import Contact from "./Contact";
-import Choixpeau from "../pages/Choixpeau";
-import PageUser from '../pages/Page_User';
 
-
-function Layout() {
-    const [pageActuelle, updatePageActuelle] = useState('Accueil');
+function Questions() {
+    const [questionActuelle, updateQuestionActuelle] = useState("1");
 
     return(
         <div className="layout">
@@ -28,4 +22,4 @@ function Layout() {
     )
 }
 
-export default Layout;
+export default Questions;

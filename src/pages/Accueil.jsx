@@ -1,5 +1,5 @@
 import "../styles/Accueil.css";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 import TitreTexteCtaImg from "../components/TitreTexteCtaImg";
 import choixpeauVideo from "../assets/Choixpeau-video.mp4";
 import Footer from "../components/Footer";

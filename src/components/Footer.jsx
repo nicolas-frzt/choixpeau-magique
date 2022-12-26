@@ -1,5 +1,5 @@
 import "../styles/Footer.css";
-import Button from "./Button.js";
+import Button from "./Button.jsx";
 
 
 function Footer({ pageActuelle, updatePageActuelle, contactVisible }) {
