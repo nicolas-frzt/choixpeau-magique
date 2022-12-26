@@ -1,0 +1,16 @@
+.boutton{
+    width: 517px;
+    height: 81px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: brown;
+    border-radius: 66px;
+    cursor: pointer;
+}
+
+.boutton h3 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 2em;
+}

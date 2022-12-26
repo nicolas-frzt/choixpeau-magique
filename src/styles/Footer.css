@@ -1,0 +1,46 @@
+footer {
+    background-color: #000;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin-top: 150px;
+}
+
+footer .contactBtn {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .contactBtn .boutton {
+    width: 517px;
+    height: 57px;
+    background: #FFFFFF;
+    border-radius: 66px;
+}
+
+footer .contactBtn .boutton h3 {
+    color: #000;
+}
+
+footer .line {
+    left: 50%;
+    position: absolute;
+    width: 5px;
+    height: 111px;
+    background-color: #fff;
+}
+
+footer .otherLinks a {
+    margin-left: 50px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+footer .otherLinks {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px
+}

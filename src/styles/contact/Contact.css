@@ -1,0 +1,16 @@
+.contact {
+    padding-top: 106px;
+}
+
+.contact .container {
+    justify-content: center;
+    display: flex;
+    gap: 10%;
+}
+
+.contact .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}

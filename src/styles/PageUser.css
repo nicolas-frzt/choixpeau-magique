@@ -1,0 +1,30 @@
+.pageUser {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.pageUser img {
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    opacity: 0.8;
+}
+
+.pageUser .page .overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.pageUser .page .overlay h1 {
+    color: #fff;
+    font-size: 90px;
+    text-transform: uppercase;
+}

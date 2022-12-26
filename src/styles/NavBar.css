@@ -1,0 +1,62 @@
+.flex {
+    display: flex;
+}
+
+.navBar{
+   justify-content: space-between;
+   width: 100%;
+   background-color: #ccc;
+   z-index: 2;
+   position: relative;
+   position: fixed;
+   height: 106px;
+   top: 0;
+}
+
+.navBar .choixpeauLogo{
+    cursor: pointer;
+    height: 81px;
+    margin-top: 12px;
+    margin-left: 12px;
+}
+
+.navBar ul li {
+    list-style-type: none;
+    margin: 0 30px;
+    cursor: pointer;
+}
+.navBar .navLinks{
+    align-items: center;
+}
+.navBar .navLinks ul li h4 i {
+    font-size: 2em;
+    margin-right: 10px;
+}
+.navBar .navLinks ul li h4 {
+    display: flex;
+    align-items: center;
+}
+
+.tabSelected::after{
+    position: absolute;
+    content: '';
+    height: 5px;
+    background-color: rgb(87, 87, 87);
+    border-radius: 50px;
+}
+
+.navBar .navLinks ul .accueilTab .tabSelected::after{
+    width: 60px;
+    top: 65px;
+    right: 368px;
+}
+.navBar .navLinks ul .choixpeauTab .tabSelected::after{
+    width: 80px;
+    top: 65px;
+    right: 189px;
+}
+.navBar .navLinks ul .contactTab .tabSelected::after{
+    width: 58px;
+    top: 65px;
+    right: 30px;
+}

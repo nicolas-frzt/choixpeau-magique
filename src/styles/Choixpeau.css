@@ -1,0 +1,40 @@
+.choixpeau {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 70vh;
+    padding-top: 106px;
+}
+
+.choixpeau .contenu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.choixpeau .contenu h1 {
+    font-size: 90px;
+    text-transform: uppercase;
+    font-weight: 450;
+}
+
+.choixpeau .contenu input {
+    outline: none;
+    border: none;
+    border-bottom: 7px solid black;
+    border-radius: 3px;
+    font-size: 80px;
+    font-weight: 350;
+    margin-top: 5px;
+    margin-left: 30px;
+    text-align: center;
+    width: 700px;
+}
+
+.choixpeau .bouttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

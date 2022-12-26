@@ -1,0 +1,22 @@
+.formulaire{
+    margin: 50px;
+}
+
+.formulaire h2 {
+    margin-bottom: 20px;
+}
+
+.champs{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.champs .petit {
+    max-width: 500px;
+}
+
+.champs button{
+    width: 130px;
+    height: 40px;
+}

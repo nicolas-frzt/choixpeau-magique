@@ -1,0 +1,62 @@
+.card {
+    width: 233px;
+    height: 350px;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    margin-top: 70px;
+}
+
+.card .imgBox {
+    border-radius: 70px;
+}
+
+.card .imgBox img {
+    margin-top: 30px;
+    width: 171px;
+    height: 171px;
+}
+
+.card .contenu .details {
+    flex-direction: column;
+}
+
+.card .contenu .details h4 {
+    margin: 0;
+    font-size: 25px;
+}
+
+.card .contenu .details h5 {
+    margin: 15px 0 10px 0;
+    font-size: 15px;
+}
+
+.card .contenu .bouttons, .card .contenu .details, .card .imgBox, .card .contenu .bouttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .contenu .bouttons a {
+    text-transform: uppercase;
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 0;
+    height: 40px;
+    width: 150px;
+    background-color: #ccc;
+    color: inherit;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.card .contenu .bouttons a:hover {
+    background-color: rgb(172, 172, 172);
+}
+
+.card .contenu .bouttons a {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
