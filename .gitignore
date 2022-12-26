@@ -25,5 +25,4 @@ yarn-error.log*
 
 
 # Video
-.mp4
-/assets
+/src/assets/*.mp4
