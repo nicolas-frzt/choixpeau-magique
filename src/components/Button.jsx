@@ -1,7 +1,7 @@
 import "../styles/Button.css";
 
 
-function Button( {text, linkTo} ) {
+function Button( {text, linkTo, color} ) {
     const action = () => {
         linkTo();
         setTimeout(function(){
@@ -10,10 +10,15 @@ function Button( {text, linkTo} ) {
     }
 
     return (
-        <div className="boutton" onClick={action}>
+        <div className="boutton" onClick={action} style={{backgroundColor: color}}>
             <h3>{text}</h3>
         </div>
     )
 }
+
+Button.defaultProps = {
+    color: "brown"
+}
+
 
 export default Button;

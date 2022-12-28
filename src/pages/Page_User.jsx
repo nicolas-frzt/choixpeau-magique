@@ -1,7 +1,7 @@
 import '../styles/PageUser.css';
 import Boutton from '../components/Button';
 
-function PageUser() {
+function PageUser({ updatePageActuelle }) {
     let imgSrc;
     let imgAlt
     let maison = localStorage.getItem('Maison');
@@ -27,7 +27,7 @@ function PageUser() {
             <div className="page">
                 <div className="overlay">
                     <h1>{localStorage.getItem("Name")}</h1>
-                    <Boutton text="Passer le test" />
+                    <Boutton linkTo={() => updatePageActuelle('Questions')} text="Passer le test" />
                 </div>
             </div>
         </div>

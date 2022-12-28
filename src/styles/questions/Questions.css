@@ -1,0 +1,78 @@
+.question {
+    padding-top: 106px;
+}
+
+.question .question-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.question .question-container img {
+    width: 507px;
+    height: 404px;
+    margin-left: 80px;
+    margin-right: 50px;
+}
+
+.question .question-container .bulle .contenu {
+    margin-bottom: 20px;
+}
+
+.question .question-container .bulle .contenu h3 {
+    margin: 0 0 10px 0;
+    font-size: 25px;
+}
+
+.bubble {
+    width: 60%;
+    position: absolute;
+    top: 250px;
+    background-color: #ccc;
+    padding: 20px;
+    color: #222;
+    border-radius: 3px;
+    margin-left: 20px;
+}
+
+.bubble::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 30px solid #ccc;
+    left: -30px;
+    top: 30px;
+
+}
+
+.question .question-container .cote-droit h2 {
+    font-size: 30px;
+    margin-left: 15px;
+    padding-bottom: 25px;
+}
+
+.question .bouttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.question .bouttons .annuler {
+    width: 234px;
+    height: 63px;
+    background-color: #D9D9D9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-left: 5%;
+    cursor: pointer;
+}
+
+.question .bouttons:nth-child(2) {
+    margin-right: 114px;
+}
