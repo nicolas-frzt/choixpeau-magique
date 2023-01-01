@@ -1,5 +1,5 @@
 import '../styles/questions/Questions.css';
-import Propositions from "../components/questions/Propositions"
+import Propositions from "../components/questions/Propositions.jsx"
 import Button from "../components/Button";
 import {useState} from 'react';
 import { dataQuestion } from "../data/datas-questions"
@@ -12,6 +12,10 @@ function Questions({ pageActuelle, updatePageActuelle }) {
     let lesPropositions;
 
     const [numeroQuestionActuelle, setNumeroQuestionActuelle] = useState(0);
+    const [gryffondorPnts, addGryffondorPnts] = useState(0);
+    const [serpentardPnts, addSerpentardPnts] = useState(0);
+    const [serdaiglePnts, addSerdaiglePnts] = useState(0);
+    const [poufsoufflePnts, addPoufsoufflePnts] = useState(0);
 
     let indice = 0;
 
@@ -36,7 +40,17 @@ function Questions({ pageActuelle, updatePageActuelle }) {
                         <div className="contenu bubble">
                             <h3>{questionDuTexte}</h3>
                         </div>
-                    <Propositions propositions={lesPropositions} />
+                    <Propositions
+                        propositions={lesPropositions}
+                        gryffondorPnts={gryffondorPnts}
+                        serpentardPnts={serpentardPnts}
+                        serdaiglePnts={serdaiglePnts}
+                        poufsoufflePnts={poufsoufflePnts}
+                        addGryffondorPnts={addGryffondorPnts}
+                        addSerpentardPnts={addSerpentardPnts}
+                        addSerdaiglePnts={addSerdaiglePnts}
+                        addPoufsoufflePnts={addPoufsoufflePnts}
+                    />
                 </div>
                 </div>
             </div>
