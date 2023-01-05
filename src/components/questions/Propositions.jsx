@@ -1,6 +1,7 @@
 import "../../styles/questions/Propositions.css";
 import { dataQuestion } from "../../data/datas-questions"
 import { useState } from "react";
+import { useEffect } from "react";
 
 function Propositions( {setChoix, setNumeroQuestionActuelle, numeroQuestionActuelle} ) {
     const [valeurSelectionnee, setValeurSelectionnee] = useState('');
@@ -9,6 +10,12 @@ function Propositions( {setChoix, setNumeroQuestionActuelle, numeroQuestionActue
     const [darkBackground2, setDarkBackground2] = useState(false);
     const [darkBackground3, setDarkBackground3] = useState(false);
     const [darkBackground4, setDarkBackground4] = useState(false);
+    useEffect(() => {
+        setDarkBackground1(false);
+        setDarkBackground2(false);
+        setDarkBackground3(false);
+        setDarkBackground4(false);
+    }, [dataQuestion[numeroQuestionActuelle].propositions[0].nomChoix] || dataQuestion[numeroQuestionActuelle].propositions[1].nomChoix || dataQuestion[numeroQuestionActuelle].propositions[2].nomChoix || dataQuestion[numeroQuestionActuelle].propositions[3].nomChoix);
 
     function divClicked(e) {
         setValeurSelectionnee(e.target.getAttribute('data-value'));
