@@ -1,16 +1,91 @@
 import "../../styles/questions/Propositions.css";
-import Choix from "./Choix"
+import { useState } from "react";
 
-function Propositions({ propositions, gryffondorPnts, serpentardPnts, addGryffondorPnts, serdaiglePnts, poufsoufflePnts, addSerpentardPnts, addSerdaiglePnts, addPoufsoufflePnts }) {
+function Propositions( {setChoix, choix} ) {
+    const [valeurSelectionnee, setValeurSelectionnee] = useState('');
+
+    const [darkBackground1, setDarkBackground1] = useState(false);
+    const [darkBackground2, setDarkBackground2] = useState(false);
+    const [darkBackground3, setDarkBackground3] = useState(false);
+    const [darkBackground4, setDarkBackground4] = useState(false);
+
+    function divClicked(e) {
+        setValeurSelectionnee(e.target.getAttribute('data-value'));
+        const target = e.target;
+        const id = target.getAttribute('id');
+
+        if (id === 'div1') {
+            setDarkBackground1(!darkBackground1);
+            setDarkBackground2(false);
+            setDarkBackground3(false);
+            setDarkBackground4(false);
+        } else if (id === 'div2') {
+            setDarkBackground1(false);
+            setDarkBackground2(!darkBackground2);
+            setDarkBackground3(false);
+            setDarkBackground4(false);
+        } else if (id === 'div3') {
+            setDarkBackground1(false);
+            setDarkBackground2(false);
+            setDarkBackground3(!darkBackground3);
+            setDarkBackground4(false);
+        } else if (id === 'div4') {
+            setDarkBackground1(false);
+            setDarkBackground2(false);
+            setDarkBackground3(false);
+            setDarkBackground4(!darkBackground4);
+        }
+    }
+    
+    function handleSubmit(e) {
+        e.preventDefault();
+        setChoix(valeurSelectionnee);
+    }
+
+
     return (
-        <div className="propositions-container">
+        <form className="propositions-container" onSubmit={handleSubmit}>
+            <input type="hidden" name="choix" value={valeurSelectionnee} />
             <div className="propositions">
-                <Choix proposition={propositions[0]} rang="1" gryffondorPnts={gryffondorPnts} serpentardPnts={serpentardPnts} serdaiglePnts={serdaiglePnts} poufsoufflePnts={poufsoufflePnts} addGryffondorPnts={addGryffondorPnts} addSerpentardPnts={addSerpentardPnts} addSerdaiglePnts={addSerdaiglePnts} addPoufsoufflePnts={addPoufsoufflePnts} />
-                {/* <Choix proposition={propositions[1]} rang="2" gryffondorPnts={gryffondorPnts} serpentardPnts={serpentardPnts} serdaiglePnts={serdaiglePnts} poufsoufflePnts={poufsoufflePnts} addGryffondorPnts={addGryffondorPnts} addSerpentardPnts={addSerpentardPnts} addSerdaiglePnts={addSerdaiglePnts} addPoufsoufflePnts={addPoufsoufflePnts} />
-                <Choix proposition={propositions[2]} rang="3" gryffondorPnts={gryffondorPnts} serpentardPnts={serpentardPnts} serdaiglePnts={serdaiglePnts} poufsoufflePnts={poufsoufflePnts} addGryffondorPnts={addGryffondorPnts} addSerpentardPnts={addSerpentardPnts} addSerdaiglePnts={addSerdaiglePnts} addPoufsoufflePnts={addPoufsoufflePnts} />
-                <Choix proposition={propositions[3]} rang="4" gryffondorPnts={gryffondorPnts} serpentardPnts={serpentardPnts} serdaiglePnts={serdaiglePnts} poufsoufflePnts={poufsoufflePnts} addGryffondorPnts={addGryffondorPnts} addSerpentardPnts={addSerpentardPnts} addSerdaiglePnts={addSerdaiglePnts} addPoufsoufflePnts={addPoufsoufflePnts} /> */}
+            <div
+                className="choix"
+                data-value="serdaigle"
+                id="div1"
+                onClick={divClicked}
+                style={{ backgroundColor: darkBackground1 ? '#aaa' : '#ccc' }}
+            >
+                Proposition
             </div>
-        </div>
+            <div
+                className="choix"
+                data-value="poufsouffle"
+                id="div2"
+                onClick={divClicked}
+                style={{ backgroundColor: darkBackground2 ? '#aaa' : '#ccc' }}
+            >
+                Proposition
+            </div>
+            <div
+                className="choix"
+                data-value="serpentard"
+                id="div3"
+                onClick={divClicked}
+                style={{ backgroundColor: darkBackground3 ? '#aaa' : '#ccc' }}
+            >
+                Proposition
+            </div>
+            <div
+                className="choix"
+                data-value="gryffondor"
+                id="div4"
+                onClick={divClicked}
+                style={{ backgroundColor: darkBackground4 ? '#aaa' : '#ccc' }}
+            >
+                Proposition
+            </div>
+            </div>
+            <button type="submit">VALIDER</button>
+        </form>
     )
 }
 

@@ -56,10 +56,6 @@
     padding-bottom: 25px;
 }
 
-.question .bouttons {
-    display: flex;
-    justify-content: space-between;
-}
 
 .question .bouttons .annuler {
     width: 234px;
@@ -71,8 +67,6 @@
     font-size: 20px;
     margin-left: 5%;
     cursor: pointer;
-}
-
-.question .bouttons:nth-child(2) {
     margin-right: 114px;
 }
+

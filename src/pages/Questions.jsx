@@ -1,21 +1,45 @@
 import '../styles/questions/Questions.css';
 import Propositions from "../components/questions/Propositions.jsx"
-import Button from "../components/Button";
-import {useState} from 'react';
+import { useState } from 'react';
+import { useEffect } from 'react';
 import { dataQuestion } from "../data/datas-questions"
 
 function Questions({ pageActuelle, updatePageActuelle }) {
-    const [question, setQuestion] = useState(1)
+    const [choix, setChoix] = useState();
 
     let numeroDesQuestions;
     let questionDuTexte;
     let lesPropositions;
 
     const [numeroQuestionActuelle, setNumeroQuestionActuelle] = useState(0);
+    
     const [gryffondorPnts, addGryffondorPnts] = useState(0);
     const [serpentardPnts, addSerpentardPnts] = useState(0);
     const [serdaiglePnts, addSerdaiglePnts] = useState(0);
     const [poufsoufflePnts, addPoufsoufflePnts] = useState(0);
+
+    useEffect(() => {
+        if (choix === "serdaigle") {
+            addSerdaiglePnts(serdaiglePnts + 1);
+        } else if (choix === "serpentard") {
+            addSerpentardPnts(serpentardPnts + 1);
+        } else if (choix === "poufsouffle") {
+            addPoufsoufflePnts(poufsoufflePnts + 1);
+        } else if (choix === "gryffondor") {
+            addGryffondorPnts(gryffondorPnts + 1);
+        } else {
+            console.log("Aucune maison sélectionnée.");
+        }
+    }, [choix])
+    
+    useEffect(() => {
+        console.log(`Serdaigle : ${serdaiglePnts}`)
+        console.log(`Serpentard : ${serpentardPnts}`)
+        console.log(`Gryffondor : ${gryffondorPnts}`)
+        console.log(`Poufsouffle : ${poufsoufflePnts}`)
+    }, [serdaiglePnts, serpentardPnts, poufsoufflePnts, gryffondorPnts])
+    
+    
 
     let indice = 0;
 
@@ -40,23 +64,12 @@ function Questions({ pageActuelle, updatePageActuelle }) {
                         <div className="contenu bubble">
                             <h3>{questionDuTexte}</h3>
                         </div>
-                    <Propositions
-                        propositions={lesPropositions}
-                        gryffondorPnts={gryffondorPnts}
-                        serpentardPnts={serpentardPnts}
-                        serdaiglePnts={serdaiglePnts}
-                        poufsoufflePnts={poufsoufflePnts}
-                        addGryffondorPnts={addGryffondorPnts}
-                        addSerpentardPnts={addSerpentardPnts}
-                        addSerdaiglePnts={addSerdaiglePnts}
-                        addPoufsoufflePnts={addPoufsoufflePnts}
-                    />
-                </div>
+                    </div>
+                    <Propositions setChoix={setChoix} choix={choix} />
                 </div>
             </div>
             <div className="bouttons">
                 <div className="annuler">ANNULER</div>
-                <Button text="Valider" color="#4CBA4A" id="valider" linkTo={() => setNumeroQuestionActuelle(questionDuTexte++)} />
             </div>
         </div>
     )
