@@ -1,7 +1,8 @@
 import "../../styles/questions/Propositions.css";
+// import { dataQuestion } from "../data/datas-questions"
 import { useState } from "react";
 
-function Propositions( {setChoix, choix} ) {
+function Propositions( {setChoix, setNumeroQuestionActuelle, numeroQuestionActuelle} ) {
     const [valeurSelectionnee, setValeurSelectionnee] = useState('');
 
     const [darkBackground1, setDarkBackground1] = useState(false);
@@ -40,6 +41,7 @@ function Propositions( {setChoix, choix} ) {
     function handleSubmit(e) {
         e.preventDefault();
         setChoix(valeurSelectionnee);
+        setNumeroQuestionActuelle(numeroQuestionActuelle + 1)
     }
 
 
@@ -54,7 +56,7 @@ function Propositions( {setChoix, choix} ) {
                 onClick={divClicked}
                 style={{ backgroundColor: darkBackground1 ? '#aaa' : '#ccc' }}
             >
-                Proposition
+                Serdaigle
             </div>
             <div
                 className="choix"
@@ -63,7 +65,7 @@ function Propositions( {setChoix, choix} ) {
                 onClick={divClicked}
                 style={{ backgroundColor: darkBackground2 ? '#aaa' : '#ccc' }}
             >
-                Proposition
+                Poufsouffle
             </div>
             <div
                 className="choix"
@@ -72,7 +74,7 @@ function Propositions( {setChoix, choix} ) {
                 onClick={divClicked}
                 style={{ backgroundColor: darkBackground3 ? '#aaa' : '#ccc' }}
             >
-                Proposition
+                Serpentard
             </div>
             <div
                 className="choix"
@@ -81,7 +83,7 @@ function Propositions( {setChoix, choix} ) {
                 onClick={divClicked}
                 style={{ backgroundColor: darkBackground4 ? '#aaa' : '#ccc' }}
             >
-                Proposition
+                Gryffondor
             </div>
             </div>
             <button type="submit">VALIDER</button>

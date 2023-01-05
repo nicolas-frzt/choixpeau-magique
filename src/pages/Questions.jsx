@@ -6,11 +6,6 @@ import { dataQuestion } from "../data/datas-questions"
 
 function Questions({ pageActuelle, updatePageActuelle }) {
     const [choix, setChoix] = useState();
-
-    let numeroDesQuestions;
-    let questionDuTexte;
-    let lesPropositions;
-
     const [numeroQuestionActuelle, setNumeroQuestionActuelle] = useState(0);
     
     const [gryffondorPnts, addGryffondorPnts] = useState(0);
@@ -33,25 +28,37 @@ function Questions({ pageActuelle, updatePageActuelle }) {
     }, [choix])
     
     useEffect(() => {
-        console.log(`Serdaigle : ${serdaiglePnts}`)
-        console.log(`Serpentard : ${serpentardPnts}`)
-        console.log(`Gryffondor : ${gryffondorPnts}`)
-        console.log(`Poufsouffle : ${poufsoufflePnts}`)
+        // console.log(`Serdaigle : ${serdaiglePnts}`)
+        // console.log(`Serpentard : ${serpentardPnts}`)
+        // console.log(`Gryffondor : ${gryffondorPnts}`)
+        // console.log(`Poufsouffle : ${poufsoufflePnts}`)
     }, [serdaiglePnts, serpentardPnts, poufsoufflePnts, gryffondorPnts])
     
-    
 
+    let numeroDesQuestions;
+    let questionDuTexte;
+    let lesPropositions;
     let indice = 0;
 
     while (indice < dataQuestion.length) {
         numeroDesQuestions = dataQuestion[indice].numeroQuestion;
+        // console.log(numeroDesQuestions)
         questionDuTexte = dataQuestion[indice].question;
+        // console.log(questionDuTexte)
         lesPropositions = dataQuestion[indice].propositions;
+        // console.log(lesPropositions)
         indice++;
-        if (numeroQuestionActuelle > indice) {
+        console.log(`Numéro question actuelle: ${numeroQuestionActuelle}`);
+        console.log(`Indice : ${indice}`);
+        if (numeroQuestionActuelle >= indice) {
+            console.log(`Numéro question actuelle: ${numeroQuestionActuelle}`);
             continue;
+        } else {
+            break;
         }
     }
+
+    
 
     
     return(
@@ -65,7 +72,7 @@ function Questions({ pageActuelle, updatePageActuelle }) {
                             <h3>{questionDuTexte}</h3>
                         </div>
                     </div>
-                    <Propositions setChoix={setChoix} choix={choix} />
+                    <Propositions setChoix={setChoix} choix={choix} setNumeroQuestionActuelle={setNumeroQuestionActuelle} numeroQuestionActuelle={numeroQuestionActuelle} />
                 </div>
             </div>
             <div className="bouttons">

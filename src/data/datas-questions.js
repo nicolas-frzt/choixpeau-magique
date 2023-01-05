@@ -31,5 +31,27 @@ export const dataQuestion = [
                 pointPour: "gryffondor",
             }
         ]
+    },
+    {
+        numeroQuestion: "2",
+        question: "fjdslkfjdsklo",
+        propositions: [
+            {
+                nomChoix: "aaaa",
+                pointPour: "poufsouffle",
+            },
+            {
+                nomChoix: "bbbb",
+                pointPour: "serdaigle",
+            },
+            {
+                nomChoix: "cccc",
+                pointPour: "serpentard",
+            },
+            {
+                nomChoix: "dddd",
+                pointPour: "gryffondor",
+            }
+        ]
     }
 ]
