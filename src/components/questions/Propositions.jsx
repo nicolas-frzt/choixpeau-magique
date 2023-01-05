@@ -1,5 +1,5 @@
 import "../../styles/questions/Propositions.css";
-// import { dataQuestion } from "../data/datas-questions"
+import { dataQuestion } from "../../data/datas-questions"
 import { useState } from "react";
 
 function Propositions( {setChoix, setNumeroQuestionActuelle, numeroQuestionActuelle} ) {
@@ -56,7 +56,7 @@ function Propositions( {setChoix, setNumeroQuestionActuelle, numeroQuestionActue
                 onClick={divClicked}
                 style={{ backgroundColor: darkBackground1 ? '#aaa' : '#ccc' }}
             >
-                Serdaigle
+                {dataQuestion[numeroQuestionActuelle].propositions[0].nomChoix}
             </div>
             <div
                 className="choix"
@@ -65,7 +65,7 @@ function Propositions( {setChoix, setNumeroQuestionActuelle, numeroQuestionActue
                 onClick={divClicked}
                 style={{ backgroundColor: darkBackground2 ? '#aaa' : '#ccc' }}
             >
-                Poufsouffle
+                {dataQuestion[numeroQuestionActuelle].propositions[1].nomChoix}
             </div>
             <div
                 className="choix"
@@ -74,7 +74,7 @@ function Propositions( {setChoix, setNumeroQuestionActuelle, numeroQuestionActue
                 onClick={divClicked}
                 style={{ backgroundColor: darkBackground3 ? '#aaa' : '#ccc' }}
             >
-                Serpentard
+                {dataQuestion[numeroQuestionActuelle].propositions[2].nomChoix}
             </div>
             <div
                 className="choix"
@@ -83,7 +83,7 @@ function Propositions( {setChoix, setNumeroQuestionActuelle, numeroQuestionActue
                 onClick={divClicked}
                 style={{ backgroundColor: darkBackground4 ? '#aaa' : '#ccc' }}
             >
-                Gryffondor
+                {dataQuestion[numeroQuestionActuelle].propositions[3].nomChoix}
             </div>
             </div>
             <button type="submit">VALIDER</button>

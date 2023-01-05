@@ -37,19 +37,19 @@ export const dataQuestion = [
         question: "fjdslkfjdsklo",
         propositions: [
             {
-                nomChoix: "aaaa",
+                nomChoix: "caca",
                 pointPour: "poufsouffle",
             },
             {
-                nomChoix: "bbbb",
+                nomChoix: "bebou",
                 pointPour: "serdaigle",
             },
             {
-                nomChoix: "cccc",
+                nomChoix: "loul",
                 pointPour: "serpentard",
             },
             {
-                nomChoix: "dddd",
+                nomChoix: "aesthetic",
                 pointPour: "gryffondor",
             }
         ]
