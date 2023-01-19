@@ -1,55 +1,156 @@
 class question {
-    constructor(numeroQuestion, question, propostions){
-        this.numeroQuestion = numeroQuestion;
+    constructor(question, propostions){
         this.question = question;
         this.propostions = propostions;
     }
 }
 
-let question1 = new question("1", "Quelle est ta couleur préférée", [{}, {}, {}, {}])
 
 
 export const dataQuestion = [
     {
-        numeroQuestion: "1",
-        question: "loul",
+        question: "Parmis les suivantes, quelle est ta couleur préférée ?",
         propositions: [
             {
-                nomChoix: "aaaa",
+                nomChoix: "Jaune",
                 pointPour: "poufsouffle",
             },
             {
-                nomChoix: "bbbb",
+                nomChoix: "Bleu",
                 pointPour: "serdaigle",
             },
             {
-                nomChoix: "cccc",
+                nomChoix: "Vert",
                 pointPour: "serpentard",
             },
             {
-                nomChoix: "dddd",
+                nomChoix: "Rouge",
                 pointPour: "gryffondor",
             }
         ]
     },
     {
-        numeroQuestion: "2",
-        question: "fjdslkfjdsklo",
+        question: "Parmis les suivantes, quelles sont les qualités qui te représentent le plus ?",
         propositions: [
             {
-                nomChoix: "caca",
+                nomChoix: "La patience",
                 pointPour: "poufsouffle",
             },
             {
-                nomChoix: "bebou",
+                nomChoix: "La sagesse",
                 pointPour: "serdaigle",
             },
             {
-                nomChoix: "loul",
+                nomChoix: "La ruse",
                 pointPour: "serpentard",
             },
             {
-                nomChoix: "aesthetic",
+                nomChoix: "Le courage",
+                pointPour: "gryffondor",
+            }
+        ]
+    },
+    {
+        question: "Quel est ton personnage préféré d'Harry Potter parmis :",
+        propositions: [
+            {
+                nomChoix: "Cédric Digory",
+                pointPour: "poufsouffle",
+            },
+            {
+                nomChoix: "Cho Chang",
+                pointPour: "serdaigle",
+            },
+            {
+                nomChoix: "Drago Mallefoy",
+                pointPour: "serpentard",
+            },
+            {
+                nomChoix: "Albus Dumbledore",
+                pointPour: "gryffondor",
+            }
+        ]
+    },
+    {
+        question: "Quel professeur préfèrerais-tu avoir ?",
+        propositions: [
+            {
+                nomChoix: "Pomona Chourave",
+                pointPour: "poufsouffle",
+            },
+            {
+                nomChoix: "Filius Flitwick",
+                pointPour: "serdaigle",
+            },
+            {
+                nomChoix: "Severus Rogue",
+                pointPour: "serpentard",
+            },
+            {
+                nomChoix: "Minerva McGonagall",
+                pointPour: "gryffondor",
+            }
+        ]
+    },
+    {
+        question: "C'est Noël à Poudlard ! Quel cadeau aimerais-tu avoir ?",
+        propositions: [
+            {
+                nomChoix: "Un détecteur de mensonges",
+                pointPour: "poufsouffle",
+            },
+            {
+                nomChoix: "Une cape d'invisibilité",
+                pointPour: "serdaigle",
+            },
+            {
+                nomChoix: "Un Nimbus 2001 (balai magique)",
+                pointPour: "serpentard",
+            },
+            {
+                nomChoix: "La carte du maraudeur",
+                pointPour: "gryffondor",
+            }
+        ]
+    },
+    {
+        question: "Tu es seul/e dans Poudlard. Quesqu'y te tenterait le plus parmis :",
+        propositions: [
+            {
+                nomChoix: "Se reposer dans le parc",
+                pointPour: "poufsouffle",
+            },
+            {
+                nomChoix: "Aller à la bibliothèque",
+                pointPour: "serdaigle",
+            },
+            {
+                nomChoix: "Explorer les salles cachées",
+                pointPour: "serpentard",
+            },
+            {
+                nomChoix: "Tenter de nouveaux sorts",
+                pointPour: "gryffondor",
+            }
+        ]
+    },
+    {
+        question: "Après ta scolarité à Poudlard, quelle ambitions professionnelles aurais-tu ?",
+        propositions: [
+            {
+                nomChoix: "Botaniste",
+                pointPour: "poufsouffle",
+            },
+            {
+                nomChoix: "Professeur à Poudlard",
+                pointPour: "serdaigle",
+            },
+            {
+                nomChoix: "Joueur de Quidditch",
+                pointPour: "serpentard",
+            },
+            {
+                nomChoix: "Auror",
                 pointPour: "gryffondor",
             }
         ]
