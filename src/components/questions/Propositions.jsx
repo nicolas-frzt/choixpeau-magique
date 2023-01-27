@@ -48,7 +48,7 @@ function Propositions( {setChoix, choix, setNumeroQuestionActuelle, numeroQuesti
     function handleSubmit(e) {
         e.preventDefault();
         setChoix(valeurSelectionnee);
-        console.log(choix);
+        // if oneOfTheDiv is selected :
         setNumeroQuestionActuelle(numeroQuestionActuelle + 1)
     }
 

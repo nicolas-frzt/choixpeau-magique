@@ -2,13 +2,13 @@ import Button from "./Button.jsx";
 import "../styles/TitreTexteCtaImg.css";
 
 
-function TitreTexteCtaImg( {titre, texte, ctaTexte, ctaLinkTo, imgSrc, imgAlt, inverse} ) {
+function TitreTexteCtaImg( {titre, texte, ctaTexte, ctaLinkTo, imgSrc, imgAlt, inverse, cta} ) {
     return (
         <section className="titreTexteCtaImg" id={titre} style={inverse ? {flexDirection: "row-reverse"} : null}>
             <div className="text">
                 <h2>{titre}</h2>
                 <p>{texte}</p>
-                <Button text={ctaTexte} linkTo={ctaLinkTo} />
+                {cta == true ? <Button text={ctaTexte} linkTo={ctaLinkTo} /> : null}
             </div>
             <img src={imgSrc} alt={imgAlt} />
 

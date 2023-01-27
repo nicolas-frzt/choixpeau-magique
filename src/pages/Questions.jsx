@@ -5,10 +5,9 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { dataQuestion } from "../data/datas-questions"
 
-function Questions({ pageActuelle, updatePageActuelle }) {
+function Questions({ pageActuelle, updatePageActuelle, maisonFinale, setMaisonFinale }) {
     const [choix, setChoix] = useState();
     const [numeroQuestionActuelle, setNumeroQuestionActuelle] = useState(0);
-    const [maisonFinale, setMaisonFinale] = useState();
     
     const [gryffondorPnts, addGryffondorPnts] = useState(0);
     const [serpentardPnts, addSerpentardPnts] = useState(0);
@@ -25,23 +24,9 @@ function Questions({ pageActuelle, updatePageActuelle }) {
         } else if (choix === "gryffondor") {
             addGryffondorPnts(gryffondorPnts + 1);
         } else {
-            console.log("Aucune maison sélectionnée.");
         }
         setChoix();
     }, [choix])
-
-    useEffect(() => {
-        console.log(`Serdaigle : ${serdaiglePnts}`)
-    }, [serdaiglePnts])
-    useEffect(() => {
-        console.log(`Serdaigle : ${serpentardPnts}`)
-    }, [serpentardPnts])
-    useEffect(() => {
-        console.log(`Serdaigle : ${gryffondorPnts}`)
-    }, [gryffondorPnts])
-    useEffect(() => {
-        console.log(`Serdaigle : ${poufsoufflePnts}`)
-    }, [poufsoufflePnts])
 
     let questionDuTexte;
     let lesPropositions;
@@ -59,7 +44,16 @@ function Questions({ pageActuelle, updatePageActuelle }) {
     }
 
     if (numeroQuestionActuelle === 7) {
-        return <Resultat />;
+        if (serdaiglePnts >= gryffondorPnts && serdaiglePnts >= poufsoufflePnts && serdaiglePnts >= serpentardPnts) {
+            setMaisonFinale("serdaigle");
+        } else if (poufsoufflePnts >= gryffondorPnts && poufsoufflePnts >= serdaiglePnts && poufsoufflePnts >= serpentardPnts) {
+            setMaisonFinale("poufsouffle");
+        } else if (serpentardPnts >= gryffondorPnts && serpentardPnts >= poufsoufflePnts && serpentardPnts >= serdaiglePnts) {
+            setMaisonFinale("serpentard");
+        } else {
+            setMaisonFinale("gryffondor");
+        }
+        return <Resultat maisonFinale={maisonFinale} setMaisonFinale={setMaisonFinale} />;
     } else {
         return(
             <div className="question">

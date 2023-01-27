@@ -1,0 +1,83 @@
+.resultat {
+    margin-top: 104px;
+}
+
+.resultat .hautPage .photo {
+    background-image: url(http://i-cms.linternaute.com/image_cms/original/1171598-la-salle-commune-de-gryffondor.jpg);
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.resultat .hautPage .photo .logoPlusMaison {
+    display: flex;
+}
+
+.resultat .hautPage .photo .logoPlusMaison h1 {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: 7em;
+    text-align: center;
+}
+
+.resultat .hautPage .photo a i {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    color: #fff;
+    position: absolute;
+    bottom: 60px;
+    font-size: 4em;
+    cursor: pointer;
+}
+
+*{
+    scroll-behavior: smooth;
+}
+
+
+.resultat .basPage .dumbledoreParle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultat .basPage .dumbledoreParle img {
+    margin-top: 135px;
+}
+
+.resultat .basPage .dumbledoreParle .bulle {
+    display: flex;
+}
+
+.resultat .basPage .dumbledoreParle .bulle .contenu h3 {
+    margin: 0 0 10px 0;
+    font-size: 25px;
+}
+
+.resultat .basPage .dumbledoreParle .bulle .bubble {
+    width: 950px;
+    margin-top: 166px;
+    margin-bottom: 20px;
+    margin-left: 120px;
+    top: 250px;
+    background-color: #ccc;
+    padding: 20px;
+    color: #222;
+    border-radius: 3px;
+}
+
+.resultat .basPage .bouttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.resultat .basPage #retour {
+    margin-bottom: 70px;
+}
