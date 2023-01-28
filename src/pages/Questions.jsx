@@ -53,7 +53,7 @@ function Questions({ pageActuelle, updatePageActuelle, maisonFinale, setMaisonFi
         } else {
             setMaisonFinale("gryffondor");
         }
-        return <Resultat maisonFinale={maisonFinale} setMaisonFinale={setMaisonFinale} />;
+        return <Resultat maisonFinale={maisonFinale} setMaisonFinale={setMaisonFinale} updatePageActuelle={updatePageActuelle} />;
     } else {
         return(
             <div className="question">

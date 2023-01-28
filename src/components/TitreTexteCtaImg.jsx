@@ -22,8 +22,8 @@ function TitreTexteCtaImg( {titre, texte, ctaTexte, ctaLinkTo, imgSrc, imgAlt, i
 //     texte, ctaTexte, ctaLinkTo, imgSrc, imgAlt, inverse
 // }
 //
-// TitreTexteCtaImg.defaultProps = {
-//     titre: ""
-// }
+TitreTexteCtaImg.defaultProps = {
+    cta: true
+}
 
 export default TitreTexteCtaImg;

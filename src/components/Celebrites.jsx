@@ -1,7 +1,6 @@
 import "../styles/Celebrites.css";
 
 function Celebrites (celebrites) {
-    console.log(celebrites);
     return (
         <div className="celebres">
             <h2>Célèbres</h2>

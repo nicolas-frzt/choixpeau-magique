@@ -1,6 +1,7 @@
 import "../styles/Choixpeau.css";
 import Boutton from "../components/Button"
 import {useState} from 'react';
+import PageUser from "./Page_User";
 
 function Choixpeau({ pageActuelle, updatePageActuelle, maisonFinale, setMaisonFinale }) {
     const [nom, setName] = useState('');
@@ -9,9 +10,9 @@ function Choixpeau({ pageActuelle, updatePageActuelle, maisonFinale, setMaisonFi
         localStorage.setItem('Name', nom);
     };
 
-    if (localStorage.getItem("Nom") !== "") {
-        updatePageActuelle('Page User')
-    } else {
+    let nomUser = localStorage.getItem("Name");
+
+    if (nomUser === "" || nomUser === null) {
         return(
             <div className="choixpeau">
                 <div className="contenu">
@@ -28,13 +29,13 @@ function Choixpeau({ pageActuelle, updatePageActuelle, maisonFinale, setMaisonFi
                             }                        
                         }/>
                 </div>
-                {nom !== '' && (
                 <div className="bouttons" onClick={handle}>
                     <Boutton text="Commencer" linkTo={() => updatePageActuelle('PageUser')} />
                 </div>
-                )}
             </div>
         )
+    } else {
+        return <PageUser updatePageActuelle={updatePageActuelle} />
     }
 }
 

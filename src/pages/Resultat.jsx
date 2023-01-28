@@ -7,7 +7,7 @@ import Footer from '../components/Footer.jsx'
 import DumbledorePhoto from "../assets/dumbledore-resultat.png"
 import { maisonsData } from '../data/maisons-data';
 
-function Resultat({ maisonFinale, setMaisonFinale }) {
+function Resultat({ maisonFinale, setMaisonFinale, updatePageActuelle }) {
     localStorage.setItem('Maison', maisonFinale);
 
     function trouverInfo() {
@@ -57,7 +57,7 @@ function Resultat({ maisonFinale, setMaisonFinale }) {
                 />
                 <Celebrites celebrites={objet.celebrites} />
                 <div className="bouttons" id="retour" >
-                    <Button text="Retour au profil" />
+                    <Button text="Retour au profil" linkTo={() => updatePageActuelle('PageUser')} />
                 </div>
             </div>
             <Footer />
