@@ -15,13 +15,13 @@ function Questions({ pageActuelle, updatePageActuelle, maisonFinale, setMaisonFi
     const [poufsoufflePnts, addPoufsoufflePnts] = useState(0);
 
     useEffect(() => {
-        if (choix === "serdaigle") {
+        if (choix === "Serdaigle") {
             addSerdaiglePnts(serdaiglePnts + 1);
-        } else if (choix === "serpentard") {
+        } else if (choix === "Serpentard") {
             addSerpentardPnts(serpentardPnts + 1);
-        } else if (choix === "poufsouffle") {
+        } else if (choix === "Poufsouffle") {
             addPoufsoufflePnts(poufsoufflePnts + 1);
-        } else if (choix === "gryffondor") {
+        } else if (choix === "Gryffondor") {
             addGryffondorPnts(gryffondorPnts + 1);
         } else {
         }
@@ -43,43 +43,43 @@ function Questions({ pageActuelle, updatePageActuelle, maisonFinale, setMaisonFi
 
     if (numeroQuestionActuelle === 7) {
         if (serdaiglePnts > gryffondorPnts && serdaiglePnts > poufsoufflePnts && serdaiglePnts > serpentardPnts) {
-            setMaisonFinale("serdaigle");
+            setMaisonFinale("Serdaigle");
         } else if (poufsoufflePnts > gryffondorPnts && poufsoufflePnts > serdaiglePnts && poufsoufflePnts > serpentardPnts) {
-            setMaisonFinale("poufsouffle");
+            setMaisonFinale("Poufsouffle");
         } else if (serpentardPnts > gryffondorPnts && serpentardPnts > poufsoufflePnts && serpentardPnts > serdaiglePnts) {
-            setMaisonFinale("serpentard");
+            setMaisonFinale("Serpentard");
         } else if (gryffondorPnts > serpentardPnts && gryffondorPnts > poufsoufflePnts && gryffondorPnts > serdaiglePnts) {
-            setMaisonFinale("gryffondor");
+            setMaisonFinale("Gryffondor");
         } else if (serdaiglePnts > poufsoufflePnts && serdaiglePnts > serpentardPnts && gryffondorPnts > poufsoufflePnts && gryffondorPnts > serpentardPnts) {
             // Serdaigle et Gryffondor
-            setMaisonFinale("serdaigle")
+            setMaisonFinale("Serdaigle")
         } else if (serdaiglePnts > gryffondorPnts && serdaiglePnts > serpentardPnts && poufsoufflePnts > gryffondorPnts && poufsoufflePnts > serpentardPnts) {
             // Serdaigle et Poufsouffle
-            setMaisonFinale("poufsouffle")
+            setMaisonFinale("Poufsouffle")
         } else if (serdaiglePnts > gryffondorPnts && serdaiglePnts > poufsoufflePnts && serpentardPnts > gryffondorPnts && serpentardPnts > poufsoufflePnts) {
             // Serdaigle et Serpentard
-            setMaisonFinale("serpentard")
+            setMaisonFinale("Serpentard")
         } else if (serpentardPnts > gryffondorPnts && serpentardPnts > serdaiglePnts && poufsoufflePnts > gryffondorPnts && poufsoufflePnts > serdaiglePnts) {
             // Serpentard et Poufsouffle
-            setMaisonFinale("poufsouffle")
+            setMaisonFinale("Poufsouffle")
         } else if (serpentardPnts > poufsoufflePnts && serpentardPnts > serdaiglePnts && gryffondorPnts > poufsoufflePnts && gryffondorPnts > serdaiglePnts) {
             // Serpentard et Poufsouffle
-            setMaisonFinale("gryffondor")
+            setMaisonFinale("Gryffondor")
         } else if (poufsoufflePnts > serpentardPnts && poufsoufflePnts > serdaiglePnts && gryffondorPnts > serpentardPnts && gryffondorPnts > serdaiglePnts) {
             // Poufsouffle et Gryffondor
-            setMaisonFinale("gryffondor")
+            setMaisonFinale("Gryffondor")
         } else if (serdaiglePnts > gryffondorPnts && serpentardPnts > gryffondorPnts && poufsoufflePnts > gryffondorPnts) {
             // Serdaigle, Serpentard et Poufsouffle
-            setMaisonFinale("serdaigle")
+            setMaisonFinale("Serdaigle")
         } else if (serpentardPnts > serdaiglePnts && poufsoufflePnts > serdaiglePnts && gryffondorPnts > serdaiglePnts) {
             // Serpentard, Poufsouffle et Gryffondor
-            setMaisonFinale("serpentard")
+            setMaisonFinale("Serpentard")
         } else if (poufsoufflePnts > serpentardPnts && gryffondorPnts > serpentardPnts && serdaiglePnts > serpentardPnts) {
             // Poufsouffle, Gryffondor et Serdaigle
-            setMaisonFinale("serdaigle")
+            setMaisonFinale("Serdaigle")
         } else if (gryffondorPnts > poufsoufflePnts && serdaiglePnts > poufsoufflePnts && serpentardPnts > poufsoufflePnts) {
             // Gryffondor, Serdaigle et Serpentard
-            setMaisonFinale("gryffondor")
+            setMaisonFinale("Gryffondor")
         }
         return <Resultat maisonFinale={maisonFinale} setMaisonFinale={setMaisonFinale} updatePageActuelle={updatePageActuelle} />;
     } else {

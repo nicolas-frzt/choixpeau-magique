@@ -59,7 +59,7 @@ function Propositions( {setChoix, choix, setNumeroQuestionActuelle, numeroQuesti
             <div className="propositions">
             <div
                 className="choix"
-                data-value="poufsouffle"
+                data-value="Poufsouffle"
                 id="div1"
                 onClick={divClicked}
                 style={{ backgroundColor: darkBackground1 ? '#aaa' : '#ccc' }}
@@ -68,7 +68,7 @@ function Propositions( {setChoix, choix, setNumeroQuestionActuelle, numeroQuesti
             </div>
             <div
                 className="choix"
-                data-value="serdaigle"
+                data-value="Serdaigle"
                 id="div2"
                 onClick={divClicked}
                 style={{ backgroundColor: darkBackground2 ? '#aaa' : '#ccc' }}
@@ -77,7 +77,7 @@ function Propositions( {setChoix, choix, setNumeroQuestionActuelle, numeroQuesti
             </div>
             <div
                 className="choix"
-                data-value="serpentard"
+                data-value="Serpentard"
                 id="div3"
                 onClick={divClicked}
                 style={{ backgroundColor: darkBackground3 ? '#aaa' : '#ccc' }}
@@ -86,7 +86,7 @@ function Propositions( {setChoix, choix, setNumeroQuestionActuelle, numeroQuesti
             </div>
             <div
                 className="choix"
-                data-value="gryffondor"
+                data-value="Gryffondor"
                 id="div4"
                 onClick={divClicked}
                 style={{ backgroundColor: darkBackground4 ? '#aaa' : '#ccc' }}

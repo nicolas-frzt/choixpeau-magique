@@ -7,13 +7,13 @@ function Choix({ proposition, rang, gryffondorPnts, serpentardPnts, serdaiglePnt
     let maisonPoint;
 
     // useEffect(() => {
-        if (point === "poufsouffle") {
+        if (point === "Poufsouffle") {
             maisonPoint = poufsoufflePnts++
-        } else if (point === "serdaigle") {
+        } else if (point === "Serdaigle") {
             maisonPoint = addSerdaiglePnts(serdaiglePnts + 1)
-        } else if (point === "serpentard") {
+        } else if (point === "Serpentard") {
             maisonPoint = addSerpentardPnts(serpentardPnts + 1)
-        } else if (point === "gryffondor") {
+        } else if (point === "Gryffondor") {
             maisonPoint = addGryffondorPnts(gryffondorPnts + 1)
         }
     // }, [poufsoufflePnts, serdaiglePnts, serpentardPnts, gryffondorPnts])

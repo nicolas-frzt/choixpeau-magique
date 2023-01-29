@@ -13,19 +13,19 @@ export const dataQuestion = [
         propositions: [
             {
                 nomChoix: "Jaune",
-                pointPour: "poufsouffle",
+                pointPour: "Poufsouffle",
             },
             {
                 nomChoix: "Bleu",
-                pointPour: "serdaigle",
+                pointPour: "Serdaigle",
             },
             {
                 nomChoix: "Vert",
-                pointPour: "serpentard",
+                pointPour: "Serpentard",
             },
             {
                 nomChoix: "Rouge",
-                pointPour: "gryffondor",
+                pointPour: "Gryffondor",
             }
         ]
     },
@@ -34,19 +34,19 @@ export const dataQuestion = [
         propositions: [
             {
                 nomChoix: "La patience",
-                pointPour: "poufsouffle",
+                pointPour: "Poufsouffle",
             },
             {
                 nomChoix: "La sagesse",
-                pointPour: "serdaigle",
+                pointPour: "Serdaigle",
             },
             {
                 nomChoix: "La ruse",
-                pointPour: "serpentard",
+                pointPour: "Serpentard",
             },
             {
                 nomChoix: "Le courage",
-                pointPour: "gryffondor",
+                pointPour: "Gryffondor",
             }
         ]
     },
@@ -55,19 +55,19 @@ export const dataQuestion = [
         propositions: [
             {
                 nomChoix: "Cédric Digory",
-                pointPour: "poufsouffle",
+                pointPour: "Poufsouffle",
             },
             {
                 nomChoix: "Cho Chang",
-                pointPour: "serdaigle",
+                pointPour: "Serdaigle",
             },
             {
                 nomChoix: "Drago Mallefoy",
-                pointPour: "serpentard",
+                pointPour: "Serpentard",
             },
             {
                 nomChoix: "Albus Dumbledore",
-                pointPour: "gryffondor",
+                pointPour: "Gryffondor",
             }
         ]
     },
@@ -76,19 +76,19 @@ export const dataQuestion = [
         propositions: [
             {
                 nomChoix: "Pomona Chourave",
-                pointPour: "poufsouffle",
+                pointPour: "Poufsouffle",
             },
             {
                 nomChoix: "Filius Flitwick",
-                pointPour: "serdaigle",
+                pointPour: "Serdaigle",
             },
             {
                 nomChoix: "Severus Rogue",
-                pointPour: "serpentard",
+                pointPour: "Serpentard",
             },
             {
                 nomChoix: "Minerva McGonagall",
-                pointPour: "gryffondor",
+                pointPour: "Gryffondor",
             }
         ]
     },
@@ -97,19 +97,19 @@ export const dataQuestion = [
         propositions: [
             {
                 nomChoix: "Un détecteur de mensonges",
-                pointPour: "poufsouffle",
+                pointPour: "Poufsouffle",
             },
             {
                 nomChoix: "Une cape d'invisibilité",
-                pointPour: "serdaigle",
+                pointPour: "Serdaigle",
             },
             {
                 nomChoix: "Un Nimbus 2001 (balai magique)",
-                pointPour: "serpentard",
+                pointPour: "Serpentard",
             },
             {
                 nomChoix: "La carte du maraudeur",
-                pointPour: "gryffondor",
+                pointPour: "Gryffondor",
             }
         ]
     },

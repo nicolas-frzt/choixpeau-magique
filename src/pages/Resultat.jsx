@@ -22,6 +22,7 @@ function Resultat({ maisonFinale, setMaisonFinale, updatePageActuelle }) {
     
     let objet = trouverInfo()
 
+    console.log(objet);
     return (
         <div className="resultat">
             <div className="hautPage">
@@ -44,7 +45,7 @@ function Resultat({ maisonFinale, setMaisonFinale, updatePageActuelle }) {
                     <div className="bulle">
                         <div className="triangle"></div>
                         <div className="contenu bubble">
-                            <h3>{objet.resume}</h3>
+                            <h3>{`Bienvenue à ${localStorage.getItem('Maison')}, ${localStorage.getItem('Name')}${objet.resume}`}</h3>
                         </div>
                     </div>
                 </div>

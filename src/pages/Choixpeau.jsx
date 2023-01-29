@@ -3,9 +3,8 @@ import Boutton from "../components/Button"
 import {useState} from 'react';
 import PageUser from "./Page_User";
 
-function Choixpeau({ pageActuelle, updatePageActuelle, maisonFinale, setMaisonFinale }) {
-    const [nom, setName] = useState('');
-    
+function Choixpeau({ pageActuelle, updatePageActuelle, maisonFinale, setMaisonFinale, nom, setName }) {
+   
     const handle = () => {
         localStorage.setItem('Name', nom);
     };
