@@ -15,7 +15,7 @@ function Footer({ pageActuelle, updatePageActuelle, contactVisible }) {
             : null}
             <div className="otherLinks">
                 <a href="https://www.google.com">Mentions légales</a>
-                <a href="https://github.com/Nicos-08/choixpeau_magique" target="_blank" rel="noreferrer">Code (GitHub)</a>
+                <a href="https://github.com/Nicos-08/choixpeau-magique" target="_blank" rel="noreferrer">Code (GitHub)</a>
             </div>
         </footer>
     )
