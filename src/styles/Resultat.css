@@ -2,38 +2,62 @@
     margin-top: 104px;
 }
 
-.resultat .hautPage .photo {
-    background-image: url(http://i-cms.linternaute.com/image_cms/original/1171598-la-salle-commune-de-gryffondor.jpg);
-    height: 100%;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+.resultat .hautPage {
+    position: relative;
 }
 
-.resultat .hautPage .photo .logoPlusMaison {
+.resultat .hautPage img {
+    width: 100%;
+    z-index: 0;
+}
+
+.resultat .hautPage .overlayResultat {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.resultat .hautPage .overlayResultat .info {
     display: flex;
 }
 
-.resultat .hautPage .photo .logoPlusMaison h1 {
+
+
+.resultat .hautPage .overlayResultat .info img {
+    height: 40%;
+    width: 40%;
+}
+
+.resultat .hautPage .overlayResultat .info h1 {
     display: flex;
     align-items: center;
     color: white;
     text-transform: uppercase;
     font-size: 7em;
     text-align: center;
+    margin-left: 7%;
 }
 
-.resultat .hautPage .photo a i {
-    display: flex;
-    width: 100%;
-    justify-content: center;
+.resultat .hautPage a i {
     color: #fff;
     position: absolute;
-    bottom: 60px;
+    bottom: 40px;
     font-size: 4em;
     cursor: pointer;
 }
+
+
+
+.resultat .hautPage .overlayResultat .lien {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 
 *{
     scroll-behavior: smooth;

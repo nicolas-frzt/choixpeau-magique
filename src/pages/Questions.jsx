@@ -29,12 +29,10 @@ function Questions({ pageActuelle, updatePageActuelle, maisonFinale, setMaisonFi
     }, [choix])
 
     let questionDuTexte;
-    let lesPropositions;
     let indice = 0;
 
     while (indice < dataQuestion.length) {
         questionDuTexte = dataQuestion[indice].question;
-        lesPropositions = dataQuestion[indice].propositions;
         indice++;
         if (numeroQuestionActuelle >= indice) {
             continue;

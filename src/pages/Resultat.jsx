@@ -1,4 +1,4 @@
-import '../styles/Resultat.css';
+import "../styles/Resultat.css";
 import { Link } from "react-scroll";
 import Button from '../components/Button.jsx'
 import Celebrites from '../components/Celebrites.jsx';
@@ -6,11 +6,12 @@ import TitreTexteCtaImg from "../components/TitreTexteCtaImg.jsx"
 import Footer from '../components/Footer.jsx'
 import DumbledorePhoto from "../assets/dumbledore-resultat.png"
 import { maisonsData } from '../data/maisons-data';
+import { useEffect } from "react";
 
 function Resultat({ maisonFinale, setMaisonFinale, updatePageActuelle }) {
     localStorage.setItem('Maison', maisonFinale);
 
-    function trouverInfo() {
+    function trouverInfo () {
         for (let index = 0; index < maisonsData.length; index++) {
             if (maisonsData[index].maison === maisonFinale) {
                 return maisonsData[index]
@@ -18,18 +19,20 @@ function Resultat({ maisonFinale, setMaisonFinale, updatePageActuelle }) {
         }
     }
 
+    
     let objet = trouverInfo()
 
     return (
         <div className="resultat">
             <div className="hautPage">
-                <div className="photo">
-                    <div className="logoPlusMaison">
+                <img src={objet.fondEcran} alt="" />
+                <div className="overlayResultat">
+                    <div className="info">
                         <img src="https://www.pixiegames.fr/1399-large_default/choixpeau-magique-harry-potter.jpg" alt="" />
                         <h1>{`${maisonFinale} !`}</h1>
                         {/* Faire avec un effet stylé : des lettres aléatoires arrivent et se mélangent très vite, l'arrière plan arrive tout doucement puis au bout de 3s le choixpeau annonce la maison, le texte aussi et l'arrière-plan correspond. */}
                     </div>
-                    <Link to="ancre">
+                    <Link className="lien" to="ancre">
                         <i className="fa-solid fa-circle-arrow-down"></i>
                     </Link>
                 </div>
