@@ -42,14 +42,44 @@ function Questions({ pageActuelle, updatePageActuelle, maisonFinale, setMaisonFi
     }
 
     if (numeroQuestionActuelle === 7) {
-        if (serdaiglePnts >= gryffondorPnts && serdaiglePnts >= poufsoufflePnts && serdaiglePnts >= serpentardPnts) {
+        if (serdaiglePnts > gryffondorPnts && serdaiglePnts > poufsoufflePnts && serdaiglePnts > serpentardPnts) {
             setMaisonFinale("serdaigle");
-        } else if (poufsoufflePnts >= gryffondorPnts && poufsoufflePnts >= serdaiglePnts && poufsoufflePnts >= serpentardPnts) {
+        } else if (poufsoufflePnts > gryffondorPnts && poufsoufflePnts > serdaiglePnts && poufsoufflePnts > serpentardPnts) {
             setMaisonFinale("poufsouffle");
-        } else if (serpentardPnts >= gryffondorPnts && serpentardPnts >= poufsoufflePnts && serpentardPnts >= serdaiglePnts) {
+        } else if (serpentardPnts > gryffondorPnts && serpentardPnts > poufsoufflePnts && serpentardPnts > serdaiglePnts) {
             setMaisonFinale("serpentard");
-        } else {
+        } else if (gryffondorPnts > serpentardPnts && gryffondorPnts > poufsoufflePnts && gryffondorPnts > serdaiglePnts) {
             setMaisonFinale("gryffondor");
+        } else if (serdaiglePnts > poufsoufflePnts && serdaiglePnts > serpentardPnts && gryffondorPnts > poufsoufflePnts && gryffondorPnts > serpentardPnts) {
+            // Serdaigle et Gryffondor
+            setMaisonFinale("serdaigle")
+        } else if (serdaiglePnts > gryffondorPnts && serdaiglePnts > serpentardPnts && poufsoufflePnts > gryffondorPnts && poufsoufflePnts > serpentardPnts) {
+            // Serdaigle et Poufsouffle
+            setMaisonFinale("poufsouffle")
+        } else if (serdaiglePnts > gryffondorPnts && serdaiglePnts > poufsoufflePnts && serpentardPnts > gryffondorPnts && serpentardPnts > poufsoufflePnts) {
+            // Serdaigle et Serpentard
+            setMaisonFinale("serpentard")
+        } else if (serpentardPnts > gryffondorPnts && serpentardPnts > serdaiglePnts && poufsoufflePnts > gryffondorPnts && poufsoufflePnts > serdaiglePnts) {
+            // Serpentard et Poufsouffle
+            setMaisonFinale("poufsouffle")
+        } else if (serpentardPnts > poufsoufflePnts && serpentardPnts > serdaiglePnts && gryffondorPnts > poufsoufflePnts && gryffondorPnts > serdaiglePnts) {
+            // Serpentard et Poufsouffle
+            setMaisonFinale("gryffondor")
+        } else if (poufsoufflePnts > serpentardPnts && poufsoufflePnts > serdaiglePnts && gryffondorPnts > serpentardPnts && gryffondorPnts > serdaiglePnts) {
+            // Poufsouffle et Gryffondor
+            setMaisonFinale("gryffondor")
+        } else if (serdaiglePnts > gryffondorPnts && serpentardPnts > gryffondorPnts && poufsoufflePnts > gryffondorPnts) {
+            // Serdaigle, Serpentard et Poufsouffle
+            setMaisonFinale("serdaigle")
+        } else if (serpentardPnts > serdaiglePnts && poufsoufflePnts > serdaiglePnts && gryffondorPnts > serdaiglePnts) {
+            // Serpentard, Poufsouffle et Gryffondor
+            setMaisonFinale("serpentard")
+        } else if (poufsoufflePnts > serpentardPnts && gryffondorPnts > serpentardPnts && serdaiglePnts > serpentardPnts) {
+            // Poufsouffle, Gryffondor et Serdaigle
+            setMaisonFinale("serdaigle")
+        } else if (gryffondorPnts > poufsoufflePnts && serdaiglePnts > poufsoufflePnts && serpentardPnts > poufsoufflePnts) {
+            // Gryffondor, Serdaigle et Serpentard
+            setMaisonFinale("gryffondor")
         }
         return <Resultat maisonFinale={maisonFinale} setMaisonFinale={setMaisonFinale} updatePageActuelle={updatePageActuelle} />;
     } else {

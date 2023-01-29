@@ -59,7 +59,7 @@ function Propositions( {setChoix, choix, setNumeroQuestionActuelle, numeroQuesti
             <div className="propositions">
             <div
                 className="choix"
-                data-value="serdaigle"
+                data-value="poufsouffle"
                 id="div1"
                 onClick={divClicked}
                 style={{ backgroundColor: darkBackground1 ? '#aaa' : '#ccc' }}
@@ -68,7 +68,7 @@ function Propositions( {setChoix, choix, setNumeroQuestionActuelle, numeroQuesti
             </div>
             <div
                 className="choix"
-                data-value="poufsouffle"
+                data-value="serdaigle"
                 id="div2"
                 onClick={divClicked}
                 style={{ backgroundColor: darkBackground2 ? '#aaa' : '#ccc' }}
