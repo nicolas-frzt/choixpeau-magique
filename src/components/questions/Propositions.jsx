@@ -6,6 +6,7 @@ import { useEffect } from "react";
 function Propositions( {setChoix, choix, setNumeroQuestionActuelle, numeroQuestionActuelle} ) {
     const [valeurSelectionnee, setValeurSelectionnee] = useState('');
 
+    const [selectionnee, setSelectionnee] = useState(false);
     const [darkBackground1, setDarkBackground1] = useState(false);
     const [darkBackground2, setDarkBackground2] = useState(false);
     const [darkBackground3, setDarkBackground3] = useState(false);
@@ -17,7 +18,13 @@ function Propositions( {setChoix, choix, setNumeroQuestionActuelle, numeroQuesti
         setDarkBackground4(false);
     }, [dataQuestion[numeroQuestionActuelle].propositions[0].nomChoix] || dataQuestion[numeroQuestionActuelle].propositions[1].nomChoix || dataQuestion[numeroQuestionActuelle].propositions[2].nomChoix || dataQuestion[numeroQuestionActuelle].propositions[3].nomChoix);
     
+
     function divClicked(e) {
+        if (selectionnee === false) {
+            setSelectionnee(true)
+        } else if (selectionnee === true) {
+            setSelectionnee(false)
+        }
         setValeurSelectionnee(e.target.getAttribute('data-value'));
         const target = e.target;
         const id = target.getAttribute('id');
@@ -47,9 +54,13 @@ function Propositions( {setChoix, choix, setNumeroQuestionActuelle, numeroQuesti
     
     function handleSubmit(e) {
         e.preventDefault();
-        setChoix(valeurSelectionnee);
-        // if oneOfTheDiv is selected :
-        setNumeroQuestionActuelle(numeroQuestionActuelle + 1)
+        if (selectionnee === false) {
+            alert("Veuillez choisir une proposition")
+        } else {
+            setSelectionnee(false)
+            setChoix(valeurSelectionnee);
+            setNumeroQuestionActuelle(numeroQuestionActuelle + 1)
+        }
     }
 
 
