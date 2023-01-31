@@ -41,6 +41,14 @@ function Questions({ pageActuelle, updatePageActuelle, maisonFinale, setMaisonFi
         }
     }
 
+    function annuler() {
+        addGryffondorPnts(0);
+        addPoufsoufflePnts(0);
+        addSerdaiglePnts(0);
+        addSerpentardPnts(0);
+        updatePageActuelle('PageUser');
+    }
+
     if (numeroQuestionActuelle === 7) {
         if (serdaiglePnts > gryffondorPnts && serdaiglePnts > poufsoufflePnts && serdaiglePnts > serpentardPnts) {
             setMaisonFinale("Serdaigle");
@@ -99,7 +107,7 @@ function Questions({ pageActuelle, updatePageActuelle, maisonFinale, setMaisonFi
                 </div>
                 
                 <div className="bouttons">
-                    <div className="annuler">ANNULER</div>
+                    <div className="annuler" onClick={annuler}>ANNULER</div>
                 </div>
             </div>
         )
