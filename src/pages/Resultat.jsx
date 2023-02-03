@@ -7,9 +7,11 @@ import Footer from '../components/Footer.jsx'
 import DumbledorePhoto from "../assets/dumbledore-resultat.png"
 import { maisonsData } from '../data/maisons-data';
 import { useEffect } from "react";
+import  { useState } from "react";
 
 function Resultat({ maisonFinale, setMaisonFinale, updatePageActuelle }) {
     localStorage.setItem('Maison', maisonFinale);
+    const [affichage, setAffichage] = useState("")
 
     function trouverInfo () {
         for (let index = 0; index < maisonsData.length; index++) {
@@ -18,11 +20,31 @@ function Resultat({ maisonFinale, setMaisonFinale, updatePageActuelle }) {
             }
         }
     }
-
     
-    let objet = trouverInfo()
+    let objet = trouverInfo();
 
-    console.log(objet);
+    const generateRandomString = (num) => {
+        const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let result1= ' ';
+        const charactersLength = characters.length;
+        for ( let i = 0; i < num; i++ ) {
+            result1 += characters.charAt(Math.floor(Math.random() * charactersLength));
+        }
+    
+        return result1;
+    }
+
+    useEffect(() => {
+        let intervalId = setInterval(() => {
+            setAffichage(generateRandomString(11));
+        }, 80);
+
+        setTimeout(() => {
+            clearInterval(intervalId);
+            setAffichage(maisonFinale);
+        }, 3000);
+    }, [maisonFinale]);
+
     return (
         <div className="resultat">
             <div className="hautPage">
@@ -30,8 +52,7 @@ function Resultat({ maisonFinale, setMaisonFinale, updatePageActuelle }) {
                 <div className="overlayResultat">
                     <div className="info">
                         <img src="https://www.pixiegames.fr/1399-large_default/choixpeau-magique-harry-potter.jpg" alt="" />
-                        <h1>{`${maisonFinale} !`}</h1>
-                        {/* Faire avec un effet stylé : des lettres aléatoires arrivent et se mélangent très vite, l'arrière plan arrive tout doucement puis au bout de 3s le choixpeau annonce la maison, le texte aussi et l'arrière-plan correspond. */}
+                        <h1>{`${affichage} !`}</h1>
                     </div>
                     <Link className="lien" to="ancre">
                         <i className="fa-solid fa-circle-arrow-down"></i>

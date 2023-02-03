@@ -9,6 +9,15 @@
 .resultat .hautPage img {
     width: 100%;
     z-index: 0;
+    animation: apparitionImg 4000ms ease-in-out;
+}
+
+@keyframes apparitionImg {
+    from {
+        opacity: 0%;
+    } to {
+        opacity: 100%;
+    }
 }
 
 .resultat .hautPage .overlayResultat {
@@ -23,8 +32,6 @@
 .resultat .hautPage .overlayResultat .info {
     display: flex;
 }
-
-
 
 .resultat .hautPage .overlayResultat .info img {
     height: 40%;
