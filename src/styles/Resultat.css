@@ -8,6 +8,8 @@
 
 .resultat .hautPage img {
     width: 100%;
+    height: 90vh;
+    object-fit: cover;
     z-index: 0;
     animation: apparitionImg 4000ms ease-in-out;
 }

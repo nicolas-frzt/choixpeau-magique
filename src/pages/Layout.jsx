@@ -8,8 +8,9 @@ import Questions from "./Questions";
 
 
 function Layout() {
-    const [pageActuelle, updatePageActuelle] = useState('Accueil');
+    const [pageActuelle, updatePageActuelle] = useState('Questions');
     const [maisonFinale, setMaisonFinale] = useState();
+    const [nom, setName] = useState('');
     return(
         <div className="layout">
             <NavBar pageActuelle={pageActuelle} updatePageActuelle={updatePageActuelle} />
@@ -20,7 +21,7 @@ function Layout() {
                  <Contact pageActuelle={pageActuelle} updatePageActuelle={updatePageActuelle} />
              )}
              {pageActuelle === 'Choixpeau' && (
-                 <Choixpeau maisonFinale={maisonFinale} setMaisonFinale={setMaisonFinale} pageActuelle={pageActuelle} updatePageActuelle={updatePageActuelle} />
+                 <Choixpeau maisonFinale={maisonFinale} setMaisonFinale={setMaisonFinale} nom={nom} setName={setName} pageActuelle={pageActuelle} updatePageActuelle={updatePageActuelle} />
              )}
              {pageActuelle === 'PageUser' && (
                  <PageUser maisonFinale={maisonFinale} setMaisonFinale={setMaisonFinale} pageActuelle={pageActuelle} updatePageActuelle={updatePageActuelle} />

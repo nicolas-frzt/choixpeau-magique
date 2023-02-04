@@ -7,7 +7,9 @@ import Footer from '../components/Footer.jsx'
 import DumbledorePhoto from "../assets/dumbledore-resultat.png"
 import { maisonsData } from '../data/maisons-data';
 import { useEffect } from "react";
-import  { useState } from "react";
+import { useState } from "react";
+import { PDFDownloadLink, Page, Text, Image, View, Document } from '@react-pdf/renderer';
+
 
 function Resultat({ maisonFinale, setMaisonFinale, updatePageActuelle }) {
     localStorage.setItem('Maison', maisonFinale);
@@ -44,14 +46,71 @@ function Resultat({ maisonFinale, setMaisonFinale, updatePageActuelle }) {
             setAffichage(maisonFinale);
         }, 3000);
     }, [maisonFinale]);
+    
+    const pdfPartager = () => (
+        <Document>
+            <Page size="A4">
+                <View>
+                    <Text style={{
+                        position: "absolute",
+                        width: "482px",
+                        height: "58px",
+                        left: "61px",
+                        top: "47px",
+                        
+                        // fontFamily: 'Inter',
+                        fontStyle: "normal",
+                        fontWeight: "400",
+                        fontSize: "27px",
+                        lineHeight: "33px",
+                        textAlign: "center",
+                        
+                        color: "#000000"
+                    }}>Tu es admis.e à Gryffondor !</Text>
+                        <Image
+                            src={maisonsData[1].fondEcran}
+                            style={{
+                                position: "absolute",
+                                width: "499px",
+                                height: "354px",
+                                left: "48px",
+                                top: "131px",
+            
+                                background: "#D9D9D9"
+                            }}
+                        />
+                        <Text
+                        style={{
+                            position: "absolute",
+                            width: "487px",
+                            height: "187px",
+                            left: "54px",
+                            top: "572px",
+            
+                            // fontFamily: 'Inter',
+                            fontStyle: "normal",
+                            fontWeight: "400",
+                            fontSize: "20px",
+                            lineHeight: "24px",
+                            textAlign: "center",
+            
+                            color: "#000000"
+            
+                        }}>D’après le Choixpeau magique, Léna fait maintenant parti.e de la maison Gryffondor à Poudlard !</Text>
+                </View>
+            </Page>
+        </Document>
+    );
+
+
 
     return (
         <div className="resultat">
             <div className="hautPage">
-                <img src={objet.fondEcran} alt="" />
+                <img src={objet.fondEcran} alt={`Salle commune de ${maisonFinale}`} />
                 <div className="overlayResultat">
                     <div className="info">
-                        <img src="https://www.pixiegames.fr/1399-large_default/choixpeau-magique-harry-potter.jpg" alt="" />
+                        <img src="https://www.pixiegames.fr/1399-large_default/choixpeau-magique-harry-potter.jpg" alt="Choixpeau magique" />
                         <h1>{`${affichage} !`}</h1>
                     </div>
                     <Link className="lien" to="ancre">
@@ -72,6 +131,12 @@ function Resultat({ maisonFinale, setMaisonFinale, updatePageActuelle }) {
                 </div>
                 <div className="bouttons">
                     <Button text="Partager !" color="black" />
+                    {/* <PDFDownloadLink 
+                        document={<pdfPartager />}
+                        fileName={`Résultat Choixpeau`}
+                    >
+                        {({loading}) => loading ? "Chargement" : "Télécharger"}
+                    </PDFDownloadLink> */}
                 </div>
                 <TitreTexteCtaImg
                     cta={false}
