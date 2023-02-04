@@ -3,14 +3,13 @@
 }
 
 .navBar{
-   justify-content: space-between;
-   width: 100%;
-   background-color: #ccc;
-   z-index: 2;
-   position: relative;
-   position: fixed;
-   height: 106px;
-   top: 0;
+    position: sticky;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #ccc;
+    z-index: 2;
+    height: 106px;
+    top: 0;
 }
 
 .navBar .choixpeauLogo{
@@ -37,26 +36,11 @@
     align-items: center;
 }
 
-.tabSelected::after{
-    position: absolute;
-    content: '';
-    height: 5px;
-    background-color: rgb(87, 87, 87);
-    border-radius: 50px;
-}
 
-.navBar .navLinks ul .accueilTab .tabSelected::after{
-    width: 60px;
-    top: 65px;
-    right: 368px;
-}
-.navBar .navLinks ul .choixpeauTab .tabSelected::after{
-    width: 80px;
-    top: 65px;
-    right: 189px;
-}
-.navBar .navLinks ul .contactTab .tabSelected::after{
-    width: 58px;
-    top: 65px;
-    right: 30px;
+@media screen and (max-width: 710px) {
+    .navBar {
+        position: sticky;
+        bottom: 0;
+        float: bottom;
+    }
 }
