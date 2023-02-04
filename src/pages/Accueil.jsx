@@ -8,7 +8,7 @@ function Accueil({ pageActuelle, updatePageActuelle }) {
     return(
         <div className="accueil">
             <div className="landingPage">
-                <video autoPlay={true} muted={true} src={choixpeauVideo}></video>
+                <video autoPlay={true} muted={true} src={choixpeauVideo} loop={true}></video>
                 <div className="overlay">
                     <h1>LE CHOIXPEAU</h1>
                     <Link to="ancre">

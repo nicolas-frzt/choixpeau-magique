@@ -1,8 +1,21 @@
 .titreTexteCtaImg{
-    margin: 80px 200px 0 200px;
+    width: 70%;
+    margin: auto;
+    margin-top: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.titreTexteCtaImg img{
+    height: 100%;
+    max-width: 700px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.titreTexteCtaImg .text {
+    margin-left: 50px;
 }
 
 .titreTexteCtaImg .text h2{
@@ -19,9 +32,87 @@
     margin-top: 40px;
 }
 
-.titreTexteCtaImg img{
-    height: 100%;
-    max-width: 700px;
-    margin-right: 60px;
+@media screen and (max-width: 1440px) {
+    .titreTexteCtaImg img {
+        max-width: 600px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .titreTexteCtaImg img {
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .titreTexteCtaImg {
+        flex-direction: column;
+        margin-top: 40px;
+        width: 80%;
+    }
+    .titreTexteCtaImg h2 {
+        font-size: 4em;
+        margin: 0;
+    }
+    .titreTexteCtaImg img {
+        margin-top: 20px;
+        margin-left: 0;
+        margin-right: 0;
+        max-height: 400px;
+    }
+    .titreTexteCtaImg p {
+        font-size: 1.6em;
+        margin-top: 35px;
+        margin-bottom: 35px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 755px) {
+    .titreTexteCtaImg h2 {
+        font-size: 3.2em;
+    }
+    .titreTexteCtaImg img {
+        max-height: 250px;
+    }
+    .titreTexteCtaImg p {
+        font-size: 1.4em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .titreTexteCtaImg h2 {
+        font-size: 2.8em;
+        text-align: center;
+    }
+    .titreTexteCtaImg img {
+        max-height: 200px;
+    }
+    .titreTexteCtaImg p {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .titreTexteCtaImg h2 {
+        font-size: 3.5em;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .titreTexteCtaImg img {
+        max-height: 170px;
+    }
+}
+
+
+@media screen and (max-width: 350px) {
+    .titreTexteCtaImg img {
+        display: none;
+    }
+    .titreTexteCtaImg h2 {
+        font-size: 3em;
+    }
 }
 
