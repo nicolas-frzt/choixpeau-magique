@@ -69,11 +69,11 @@
     }
 }
 
-/* @media screen and (max-width: 900px) {
-    .accueil .landingPage .overlay h1 {
-        font-size: 6em;
+@media screen and (max-width: 710px) {
+    .accueil #deuxiemeSection  {
+        padding-bottom: 50px;
     }
-} */
+}
 
 @media screen and (max-width: 540px) {
     .accueil .landingPage .overlay h1 {

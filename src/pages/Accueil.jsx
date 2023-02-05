@@ -27,6 +27,7 @@ function Accueil({ pageActuelle, updatePageActuelle }) {
                 inverse={false}
             />
             <TitreTexteCtaImg
+                id={`deuxiemeSection`}
                 ctaLinkTo={() => updatePageActuelle("Choixpeau")}
                 titre="Un quiz amusant"
                 texte= {`Passe un bon moment en répondant à nos questions. Tu pourras découvrir tes qualités et tes préférences en te surprenant toi-même ! Alors n'hésite plus et clique sur le bouton "Commencer le test" !`}

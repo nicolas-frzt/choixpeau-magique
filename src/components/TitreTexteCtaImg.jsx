@@ -2,7 +2,7 @@ import Button from "./Button.jsx";
 import "../styles/TitreTexteCtaImg.css";
 import React, { useState, useEffect } from 'react';
 
-function TitreTexteCtaImg( {titre, texte, ctaTexte, ctaLinkTo, imgSrc, imgAlt, inverse, cta} ) {
+function TitreTexteCtaImg( {titre, texte, ctaTexte, ctaLinkTo, imgSrc, imgAlt, inverse, cta, id } ) {
     const [width, setWidth] = useState(window.innerWidth);
 
     useEffect(() => {
@@ -17,7 +17,7 @@ function TitreTexteCtaImg( {titre, texte, ctaTexte, ctaLinkTo, imgSrc, imgAlt, i
 
     if (width > 1200) {
         return (
-            <section className="titreTexteCtaImg" id={titre} style={inverse ? {flexDirection: "row-reverse"} : null}>
+            <section className="titreTexteCtaImg" id={id} style={inverse ? {flexDirection: "row-reverse"} : null}>
                 <div className="text">
                     <h2>{titre}</h2>
                     <p>{texte}</p>
@@ -28,7 +28,7 @@ function TitreTexteCtaImg( {titre, texte, ctaTexte, ctaLinkTo, imgSrc, imgAlt, i
         )
     } else {
         return (
-            <section className="titreTexteCtaImg" id={titre}>
+            <section className="titreTexteCtaImg" id={id}>
                 <h2>{titre}</h2>
                 <img src={imgSrc} alt={imgAlt} />
                 <p>{texte}</p>
