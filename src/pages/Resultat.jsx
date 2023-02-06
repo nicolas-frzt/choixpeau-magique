@@ -14,6 +14,7 @@ import { PDFDownloadLink, Page, Text, Image, View, Document } from '@react-pdf/r
 function Resultat({ maisonFinale, setMaisonFinale, updatePageActuelle }) {
     localStorage.setItem('Maison', maisonFinale);
     const [affichage, setAffichage] = useState("")
+    const [enableSound, setEnableSound] = useState(false)
 
     function trouverInfo () {
         for (let index = 0; index < maisonsData.length; index++) {
@@ -31,8 +32,7 @@ function Resultat({ maisonFinale, setMaisonFinale, updatePageActuelle }) {
         const charactersLength = characters.length;
         for ( let i = 0; i < num; i++ ) {
             result1 += characters.charAt(Math.floor(Math.random() * charactersLength));
-        }
-    
+        }  
         return result1;
     }
 
@@ -40,11 +40,12 @@ function Resultat({ maisonFinale, setMaisonFinale, updatePageActuelle }) {
         let intervalId = setInterval(() => {
             setAffichage(generateRandomString(11));
         }, 80);
-
         setTimeout(() => {
             clearInterval(intervalId);
             setAffichage(maisonFinale);
+            setEnableSound(true)
         }, 3000);
+
     }, [maisonFinale]);
     
     const pdfPartager = () => (
@@ -106,6 +107,7 @@ function Resultat({ maisonFinale, setMaisonFinale, updatePageActuelle }) {
 
     return (
         <div className="resultat">
+            {enableSound && <audio src={objet.son} autoPlay={true}></audio>}
             <div className="hautPage">
                 <img src={objet.fondEcran} alt={`Salle commune de ${maisonFinale}`} />
                 <div className="overlayResultat">
