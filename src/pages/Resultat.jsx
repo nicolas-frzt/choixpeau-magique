@@ -8,7 +8,6 @@ import DumbledorePhoto from "../assets/dumbledore-resultat.png"
 import { maisonsData } from '../data/maisons-data';
 import { useEffect } from "react";
 import { useState } from "react";
-import { PDFDownloadLink, Page, Text, Image, View, Document } from '@react-pdf/renderer';
 
 
 function Resultat({ maisonFinale, setMaisonFinale, updatePageActuelle }) {
@@ -48,63 +47,6 @@ function Resultat({ maisonFinale, setMaisonFinale, updatePageActuelle }) {
 
     }, [maisonFinale]);
     
-    const pdfPartager = () => (
-        <Document>
-            <Page size="A4">
-                <View>
-                    <Text style={{
-                        position: "absolute",
-                        width: "482px",
-                        height: "58px",
-                        left: "61px",
-                        top: "47px",
-                        
-                        // fontFamily: 'Inter',
-                        fontStyle: "normal",
-                        fontWeight: "400",
-                        fontSize: "27px",
-                        lineHeight: "33px",
-                        textAlign: "center",
-                        
-                        color: "#000000"
-                    }}>Tu es admis.e à Gryffondor !</Text>
-                        <Image
-                            src={maisonsData[1].fondEcran}
-                            style={{
-                                position: "absolute",
-                                width: "499px",
-                                height: "354px",
-                                left: "48px",
-                                top: "131px",
-            
-                                background: "#D9D9D9"
-                            }}
-                        />
-                        <Text
-                        style={{
-                            position: "absolute",
-                            width: "487px",
-                            height: "187px",
-                            left: "54px",
-                            top: "572px",
-            
-                            // fontFamily: 'Inter',
-                            fontStyle: "normal",
-                            fontWeight: "400",
-                            fontSize: "20px",
-                            lineHeight: "24px",
-                            textAlign: "center",
-            
-                            color: "#000000"
-            
-                        }}>D’après le Choixpeau magique, Léna fait maintenant parti.e de la maison Gryffondor à Poudlard !</Text>
-                </View>
-            </Page>
-        </Document>
-    );
-
-
-
     return (
         <div className="resultat">
             {enableSound && <audio src={objet.son} autoPlay={true}></audio>}
@@ -131,22 +73,11 @@ function Resultat({ maisonFinale, setMaisonFinale, updatePageActuelle }) {
                         </div>
                     </div>
                 </div>
-                <div className="bouttons">
-                    <Button text="Partager !" color="black" />
-                    {/* <PDFDownloadLink 
-                        document={<pdfPartager />}
-                        fileName={`Résultat Choixpeau`}
-                    >
-                        {({loading}) => loading ? "Chargement" : "Télécharger"}
-                    </PDFDownloadLink> */}
-                </div>
-                <TitreTexteCtaImg
-                    cta={false}
-                    texte={objet.historique}
-                    titre={`Historique`}
-                    imgSrc={objet.fondEcran}
-                    imgAlt={`Logo de ${maisonFinale}`}
-                />
+                <section>
+                    <h2>Historique</h2>
+                    <img src={objet.logo} alt={`Logo de ${maisonFinale}`} />
+                    <p>{objet.historique}</p>
+                </section>
                 <Celebrites celebrites={objet.celebrites} />
                 <div className="bouttons" id="retour" >
                     <Button text="Retour au profil" linkTo={() => updatePageActuelle('PageUser')} />
