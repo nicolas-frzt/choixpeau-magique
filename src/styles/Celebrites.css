@@ -9,3 +9,24 @@
     justify-content: center;
     gap: 100px;
 }
+
+.celebres .container .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.celebres .container .card img {
+    border-radius: 500px;
+    height: 171px;
+    width: 171px;
+    object-fit: cover;
+}
+
+.celebres .container .card h5 {
+    font-size: 25px;
+    margin: 0;
+    text-align: center;
+}
