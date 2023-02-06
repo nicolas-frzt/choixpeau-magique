@@ -1,6 +1,5 @@
 import "../styles/Choixpeau.css";
 import Boutton from "../components/Button"
-import {useState} from 'react';
 import PageUser from "./Page_User";
 
 function Choixpeau({ pageActuelle, updatePageActuelle, maisonFinale, setMaisonFinale, nom, setName }) {
@@ -16,7 +15,7 @@ function Choixpeau({ pageActuelle, updatePageActuelle, maisonFinale, setMaisonFi
             <div className="choixpeau">
                 <div className="contenu">
                     <h1>Bienvenue</h1>
-                    <input type="text" autoFocus={true} onChange={
+                    <input type="text" placeholder="Saisis ton nom" autoFocus={true} onChange={
                         (e) => { setName(e.target.value); }
                         } value={nom} onKeyDown={
                             (touche) => {

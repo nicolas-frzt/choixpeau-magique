@@ -32,8 +32,44 @@
     width: 700px;
 }
 
+.choixpeau .contenu input::placeholder {
+    font-style: italic;
+    font-size: 0.7em;
+}
+
 .choixpeau .bouttons {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media screen and (max-width: 1250px) {
+    .choixpeau {
+        min-height: 80vh;
+    }
+    .choixpeau .contenu {
+        flex-direction: column;
+        margin-bottom: 50px;
+        width: 100%;
+    }
+    .choixpeau .contenu h1 {
+        margin-bottom: 40px;
+    }
+    .choixpeau .contenu input {
+        width: 80%;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .choixpeau .contenu h1 {
+        font-size: 4em;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .choixpeau .contenu input::placeholder {
+        font-size: 0.5em;
+    }
 }
