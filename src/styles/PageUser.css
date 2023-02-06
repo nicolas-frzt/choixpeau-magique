@@ -4,10 +4,10 @@
 }
 
 .pageUser img {
-    position: relative;
-    width: 100%;
+    height: 90vh;
+    width: 100vw;
+    object-fit: cover;
     z-index: 0;
-    opacity: 0.8;
 }
 
 .pageUser .page .overlay {
@@ -27,4 +27,26 @@
     color: #fff;
     font-size: 90px;
     text-transform: uppercase;
+    text-align: center;
+}
+
+@media screen and (max-width: 710px) {
+    .pageUser .page .overlay h1 {
+        margin-top: 0;
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .pageUser .page .overlay h1 {
+        margin-top: 0;
+        font-size: 55px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .pageUser .page .overlay h1 {
+        margin-top: 0;
+        font-size: 45px;
+    }
 }
