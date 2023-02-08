@@ -1,7 +1,6 @@
 .propositions-container {
     width: 1200px;
     height: 354px;
-    margin-top: 80px;
     margin-left: 10px;
 }
 
@@ -11,12 +10,10 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    /* grid-template-columns: repeat(2, 364px);
-    grid-column-gap: 65px;
-    grid-row-gap: 45px; */
 }
 
 .propositions-container .propositions .choix {
+    text-align: center;
     background-color: #ccc;
     border-radius: 20px;
     width: 364px;
@@ -35,7 +32,7 @@
     margin-top: -30px;
 }
 
-.propositions-container button[type= "submit"] {
+.propositions-container .bouttons button[type= "submit"] {
     width: 458px;
     height: 76px;
     background-color: #4CBA4A;
@@ -53,4 +50,102 @@
     color: #FFFFFF;
     position: absolute;
     right: 110px;
+}
+
+@media screen and (max-width: 1760px) {
+    .propositions-container {
+        width: 1000px;
+    }
+}
+
+@media screen and (max-width: 1610px) {
+    .propositions-container {
+        width: 900px;
+    }
+}
+
+@media screen and (max-width: 1520px) {
+    .propositions-container .propositions .choix {
+        width: 35%;
+    }
+    .propositions-container .propositions .choix:nth-child(1), .propositions-container .propositions .choix:nth-child(3) {
+        margin-left: 0;
+    }
+    .propositions-container {
+        width: 100%;
+    }
+    .propositions-container .propositions {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1270px) {
+    .propositions-container .propositions {
+        width: 110%;
+    }
+}
+
+@media screen and (max-width: 1135px) {
+    .propositions-container {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .propositions-container .propositions {
+        gap: 50px;
+        width: 100%;
+    }
+    .propositions-container .propositions .choix {
+        margin: 0;
+    }
+    .propositions-container .bouttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .propositions-container .bouttons button[type= "submit"] {
+        position: initial;
+        bottom: 10%;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .propositions-container .propositions {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    .propositions-container .propositions .choix {
+        height: 65px;
+        width: 80%;
+    }
+    .propositions-container .propositions .choix:nth-child(1) {
+        margin-bottom: -30px;
+        margin-top: 70px;
+    }
+    html, body, #root, .layout, .question {
+        height: 95%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .propositions-container .bouttons {
+        width: 70%;
+    }
+    .propositions-container .bouttons button[type="submit"] {
+        height: 60px;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-height: 670px) {
+    .propositions-container .propositions {
+        gap: 40px;
+    }
+    .propositions-container .bouttons button[type="submit"] {
+        margin-top: 10px;
+    }
 }

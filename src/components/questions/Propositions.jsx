@@ -68,44 +68,46 @@ function Propositions( {setChoix, choix, setNumeroQuestionActuelle, numeroQuesti
         <form className="propositions-container" onSubmit={handleSubmit}>
             <input type="hidden" name="choix" value={valeurSelectionnee} />
             <div className="propositions">
-            <div
-                className="choix"
-                data-value="Poufsouffle"
-                id="div1"
-                onClick={divClicked}
-                style={{ backgroundColor: darkBackground1 ? '#aaa' : '#ccc' }}
-            >
-                {dataQuestion[numeroQuestionActuelle].propositions[0].nomChoix}
+                <div
+                    className="choix"
+                    data-value="Poufsouffle"
+                    id="div1"
+                    onClick={divClicked}
+                    style={{ backgroundColor: darkBackground1 ? '#aaa' : '#ccc' }}
+                >
+                    {dataQuestion[numeroQuestionActuelle].propositions[0].nomChoix}
+                </div>
+                <div
+                    className="choix"
+                    data-value="Serdaigle"
+                    id="div2"
+                    onClick={divClicked}
+                    style={{ backgroundColor: darkBackground2 ? '#aaa' : '#ccc' }}
+                >
+                    {dataQuestion[numeroQuestionActuelle].propositions[1].nomChoix}
+                </div>
+                <div
+                    className="choix"
+                    data-value="Serpentard"
+                    id="div3"
+                    onClick={divClicked}
+                    style={{ backgroundColor: darkBackground3 ? '#aaa' : '#ccc' }}
+                >
+                    {dataQuestion[numeroQuestionActuelle].propositions[2].nomChoix}
+                </div>
+                <div
+                    className="choix"
+                    data-value="Gryffondor"
+                    id="div4"
+                    onClick={divClicked}
+                    style={{ backgroundColor: darkBackground4 ? '#aaa' : '#ccc' }}
+                >
+                    {dataQuestion[numeroQuestionActuelle].propositions[3].nomChoix}
+                </div>
             </div>
-            <div
-                className="choix"
-                data-value="Serdaigle"
-                id="div2"
-                onClick={divClicked}
-                style={{ backgroundColor: darkBackground2 ? '#aaa' : '#ccc' }}
-            >
-                {dataQuestion[numeroQuestionActuelle].propositions[1].nomChoix}
+            <div className="bouttons">
+                <button type="submit">VALIDER</button>
             </div>
-            <div
-                className="choix"
-                data-value="Serpentard"
-                id="div3"
-                onClick={divClicked}
-                style={{ backgroundColor: darkBackground3 ? '#aaa' : '#ccc' }}
-            >
-                {dataQuestion[numeroQuestionActuelle].propositions[2].nomChoix}
-            </div>
-            <div
-                className="choix"
-                data-value="Gryffondor"
-                id="div4"
-                onClick={divClicked}
-                style={{ backgroundColor: darkBackground4 ? '#aaa' : '#ccc' }}
-            >
-                {dataQuestion[numeroQuestionActuelle].propositions[3].nomChoix}
-            </div>
-            </div>
-            <button type="submit">VALIDER</button>
         </form>
     )
 }
