@@ -19,7 +19,7 @@ function Choixpeau({ pageActuelle, updatePageActuelle, maisonFinale, setMaisonFi
                         (e) => { setName(e.target.value); }
                         } value={nom} onKeyDown={
                             (touche) => {
-                                const valeur = touche.keyCode;
+                                let valeur = touche.keyCode;
                                 if (valeur === 13) {
                                     handle()
                                     updatePageActuelle('PageUser');
