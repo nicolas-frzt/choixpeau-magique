@@ -1,12 +1,3 @@
-class question {
-    constructor(question, propostions){
-        this.question = question;
-        this.propostions = propostions;
-    }
-}
-
-
-
 export const dataQuestion = [
     {
         question: "Parmis les suivantes, quelle est ta couleur préférée ?",
@@ -151,6 +142,69 @@ export const dataQuestion = [
             },
             {
                 nomChoix: "Auror",
+                pointPour: "gryffondor",
+            }
+        ]
+    },
+    {
+        question: "Quelle potion rêverais-tu de préparer ?",
+        propositions: [
+            {
+                nomChoix: "Philtre de paix",
+                pointPour: "poufsouffle",
+            },
+            {
+                nomChoix: "Philtre d'amour",
+                pointPour: "serdaigle",
+            },
+            {
+                nomChoix: "Philtre de Mort Vivante",
+                pointPour: "serpentard",
+            },
+            {
+                nomChoix: "Solution de force",
+                pointPour: "gryffondor",
+            }
+        ]
+    },
+    {
+        question: "A quoi penses-tu que ressemble ton Patronus ?",
+        propositions: [
+            {
+                nomChoix: "Chien / Loup",
+                pointPour: "poufsouffle",
+            },
+            {
+                nomChoix: "Oiseau / Rapace",
+                pointPour: "serdaigle",
+            },
+            {
+                nomChoix: "Araignée / Serpent",
+                pointPour: "serpentard",
+            },
+            {
+                nomChoix: "Chat / Tigre",
+                pointPour: "gryffondor",
+            }
+        ]
+    },
+    {
+        question: "C'est Halloween à Poudlard. Que fais-tu ?",
+        propositions: [
+            {
+                nomChoix: "Manger au buffet",
+                pointPour: "poufsouffle",
+            },
+            {
+                nomChoix: "Pratiquer tes nouveaux sorts d'effroi",
+                pointPour: "serdaigle",
+            },
+            {
+                nomChoix: "Se déguiser en Voldemort et aller faire peur",
+                pointPour: "serpentard",
+            },
+            {
+                nomChoix: "Rendre visite aux fantômes du château",
                 pointPour: "gryffondor",
             }
         ]

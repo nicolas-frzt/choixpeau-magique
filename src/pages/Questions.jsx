@@ -49,7 +49,7 @@ function Questions({ pageActuelle, updatePageActuelle, maisonFinale, setMaisonFi
         updatePageActuelle('PageUser');
     }
 
-    if (numeroQuestionActuelle === 7) {
+    if (numeroQuestionActuelle === dataQuestion.length) {
         if (serdaiglePnts > gryffondorPnts && serdaiglePnts > poufsoufflePnts && serdaiglePnts > serpentardPnts) {
             setMaisonFinale("Serdaigle");
         } else if (poufsoufflePnts > gryffondorPnts && poufsoufflePnts > serdaiglePnts && poufsoufflePnts > serpentardPnts) {
