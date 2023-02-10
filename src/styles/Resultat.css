@@ -29,21 +29,24 @@
 
 .resultat .hautPage .overlayResultat .info {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 .resultat .hautPage .overlayResultat .info img {
-    height: 40%;
-    width: 40%;
+    object-fit: contain;
+    height: 80%;
+    width: 80%;
 }
 
 .resultat .hautPage .overlayResultat .info h1 {
-    display: flex;
-    align-items: center;
     color: white;
     text-transform: uppercase;
     font-size: 7em;
     text-align: center;
-    margin-left: 7%;
+    width: 100%;
+    text-shadow: #000000 0px 0px 50px;
 }
 
 .resultat .hautPage a i {
@@ -83,21 +86,22 @@
     display: flex;
 }
 
-.resultat .basPage .dumbledoreParle .bulle .contenu h3 {
-    margin: 0 0 10px 0;
-    font-size: 25px;
-}
 
 .resultat .basPage .dumbledoreParle .bulle .bubble {
-    width: 950px;
+    width: 90%;
     margin-top: 166px;
     margin-bottom: 20px;
-    margin-left: 120px;
     top: 250px;
     background-color: #ccc;
     padding: 20px;
     color: #222;
     border-radius: 3px;
+}
+
+.resultat .basPage .dumbledoreParle .bulle .contenu h3 {
+    margin: 0 0 10px 0;
+    font-size: 25px;
+    text-align: justify;
 }
 
 .resultat .basPage section {
@@ -121,8 +125,7 @@
     text-align: justify;
     font-size: 23px;
     margin-top: 50px;
-    margin-left: 250px;
-    margin-right: 250px;
+    width: 70%;
 }
 
 .resultat .basPage .bouttons {
@@ -132,6 +135,126 @@
     margin-top: 70px;
 }
 
-.resultat .basPage #retour {
-    margin-bottom: 70px;
+@media screen and (max-width: 1231px) and (max-height: 830px) {
+    .resultat .basPage .dumbledoreParle .bulle .contenu h3 {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 1480px) {
+    .resultat .hautPage .overlayResultat .info h1 {
+        font-size: 6em;
+    }
+}
+
+@media screen and (max-width: 1270px) {
+    .resultat .hautPage .overlayResultat .info img {
+        height: 65%;
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 1176px) {
+    .resultat .hautPage .overlayResultat .info h1 {
+        font-size: 5em;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .resultat .basPage .dumbledoreParle {
+        flex-direction: column;
+    }
+    .resultat .basPage .dumbledoreParle img {
+        object-fit: contain;
+        height: 35%;
+        width: 35%;
+        margin-top: 40px;
+    }
+    .resultat .basPage .dumbledoreParle .bulle {
+        justify-content: center;
+    }
+    .resultat .basPage .dumbledoreParle .bulle .bubble {
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .resultat .hautPage .overlayResultat .info {
+        flex-direction: column;
+    }
+    .resultat .hautPage .overlayResultat .info img {
+        height: 50%;
+        width: 50%;
+    }
+    .resultat .hautPage .overlayResultat .info h1 {
+        font-size: 6em;
+        margin-top: 5%;
+        word-wrap: break-word;
+    }
+}
+
+@media screen and (max-width: 848px) {
+    .resultat .basPage section h2 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .resultat .basPage section p {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 822px) {
+    .resultat .hautPage .overlayResultat .info img {
+        height: 60%;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .resultat .hautPage .overlayResultat .info h1 {
+        font-size: 5em;
+        margin: 0;
+        margin-bottom: 100px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .resultat .hautPage .overlayResultat .info h1 {
+        font-size: 4em;
+        margin-top: 5%;
+    }
+    .resultat .basPage .dumbledoreParle img {
+        height: 45%;
+        width: 45%;
+    }
+    .resultat .basPage .dumbledoreParle .bulle .bubble {
+        width: 80%;
+    }
+    .resultat .basPage section p {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .resultat .basPage .dumbledoreParle .bulle .bubble h3 {
+        font-size: 1.35em;
+    }
+    .resultat .basPage section h2 {
+        font-size: 3.5em;
+    }
+    .resultat .basPage section p {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .resultat .basPage .dumbledoreParle img {
+        display: none;
+    }
+    .resultat .basPage .dumbledoreParle .bulle .bubble {
+        width: 100%;
+    }
+    .resultat .basPage .dumbledoreParle .bulle .bubble h3 {
+        text-align: center;
+    }
 }

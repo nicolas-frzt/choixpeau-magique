@@ -2,7 +2,6 @@ import "../styles/Resultat.css";
 import { Link } from "react-scroll";
 import Button from '../components/Button.jsx'
 import Celebrites from '../components/Celebrites.jsx';
-import TitreTexteCtaImg from "../components/TitreTexteCtaImg.jsx"
 import Footer from '../components/Footer.jsx'
 import DumbledorePhoto from "../assets/dumbledore-resultat.png"
 import { maisonsData } from '../data/maisons-data';
@@ -10,7 +9,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 
-function Resultat({ maisonFinale, setMaisonFinale, updatePageActuelle }) {
+function Resultat({ maisonFinale, updatePageActuelle }) {
     localStorage.setItem('Maison', maisonFinale);
     const [affichage, setAffichage] = useState("")
     const [enableSound, setEnableSound] = useState(false)
@@ -67,7 +66,6 @@ function Resultat({ maisonFinale, setMaisonFinale, updatePageActuelle }) {
                 <div className="dumbledoreParle">
                     <img src={DumbledorePhoto} alt="Professeur Dumbledore" />
                     <div className="bulle">
-                        <div className="triangle"></div>
                         <div className="contenu bubble">
                             <h3>{`Bienvenue à ${localStorage.getItem('Maison')}, ${localStorage.getItem('Name')}${objet.resume}`}</h3>
                         </div>

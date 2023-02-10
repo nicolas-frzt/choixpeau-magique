@@ -7,7 +7,7 @@
 .celebres .container {
     display: flex;
     justify-content: center;
-    gap: 100px;
+    gap: 6%;
 }
 
 .celebres .container .card {
@@ -29,4 +29,42 @@
     font-size: 25px;
     margin: 0;
     text-align: center;
+}
+
+@media screen and (max-width: 1300px) {
+    .celebres .container {
+        gap: 5%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .celebres .container {
+        gap: 3%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .celebres .container {
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 700px) {
+    .celebres h2 {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .celebres .container .card {
+        width: 45%;
+        height: 250px;
+        margin-top: 20px;
+    }
+    .celebres .container .card img {
+        height: 140px;
+        width: 140px;
+    }
+    .celebres .container .card h5 {
+        font-size: 1.4em;
+    }
 }
