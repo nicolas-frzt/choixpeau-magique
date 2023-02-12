@@ -3,20 +3,20 @@ export const dataQuestion = [
         question: "Parmis les suivantes, quelle est ta couleur préférée ?",
         propositions: [
             {
-                nomChoix: "Jaune",
-                pointPour: "Poufsouffle",
-            },
-            {
-                nomChoix: "Bleu",
-                pointPour: "Serdaigle",
-            },
-            {
                 nomChoix: "Vert",
                 pointPour: "Serpentard",
             },
             {
+                nomChoix: "Bleu",
+                pointPour: "Serdaigle",
+            },            
+            {
                 nomChoix: "Rouge",
                 pointPour: "Gryffondor",
+            },
+            {
+                nomChoix: "Jaune",
+                pointPour: "Poufsouffle",
             }
         ]
     },
@@ -24,20 +24,20 @@ export const dataQuestion = [
         question: "Parmis les suivantes, quelles sont les qualités qui te représentent le plus ?",
         propositions: [
             {
-                nomChoix: "La patience",
-                pointPour: "Poufsouffle",
-            },
-            {
                 nomChoix: "La sagesse",
                 pointPour: "Serdaigle",
             },
             {
-                nomChoix: "La ruse",
-                pointPour: "Serpentard",
-            },
+                nomChoix: "La patience",
+                pointPour: "Poufsouffle",
+            }, 
             {
                 nomChoix: "Le courage",
                 pointPour: "Gryffondor",
+            },
+            {
+                nomChoix: "La ruse",
+                pointPour: "Serpentard",
             }
         ]
     },
@@ -66,26 +66,34 @@ export const dataQuestion = [
         question: "Quel professeur préfèrerais-tu avoir ?",
         propositions: [
             {
-                nomChoix: "Pomona Chourave",
-                pointPour: "Poufsouffle",
-            },
-            {
-                nomChoix: "Filius Flitwick",
-                pointPour: "Serdaigle",
+                nomChoix: "Minerva McGonagall",
+                pointPour: "Gryffondor",
             },
             {
                 nomChoix: "Severus Rogue",
                 pointPour: "Serpentard",
             },
             {
-                nomChoix: "Minerva McGonagall",
-                pointPour: "Gryffondor",
-            }
+                nomChoix: "Pomona Chourave",
+                pointPour: "Poufsouffle",
+            },
+            {
+                nomChoix: "Filius Flitwick",
+                pointPour: "Serdaigle",
+            }            
         ]
     },
     {
         question: "C'est Noël à Poudlard ! Quel cadeau aimerais-tu avoir ?",
         propositions: [
+            {
+                nomChoix: "Un Nimbus 2001 (balai magique)",
+                pointPour: "Serpentard",
+            },
+            {
+                nomChoix: "La carte du maraudeur",
+                pointPour: "Gryffondor",
+            },
             {
                 nomChoix: "Un détecteur de mensonges",
                 pointPour: "Poufsouffle",
@@ -94,34 +102,27 @@ export const dataQuestion = [
                 nomChoix: "Une cape d'invisibilité",
                 pointPour: "Serdaigle",
             },
-            {
-                nomChoix: "Un Nimbus 2001 (balai magique)",
-                pointPour: "Serpentard",
-            },
-            {
-                nomChoix: "La carte du maraudeur",
-                pointPour: "Gryffondor",
-            }
+            
         ]
     },
     {
         question: "Tu es seul/e dans Poudlard. Quesqu'y te tenterait le plus parmis :",
         propositions: [
             {
-                nomChoix: "Se reposer dans le parc",
-                pointPour: "poufsouffle",
+                nomChoix: "Tenter de nouveaux sorts",
+                pointPour: "Gryffondor",
             },
             {
-                nomChoix: "Aller à la bibliothèque",
-                pointPour: "serdaigle",
+                nomChoix: "Se reposer dans le parc",
+                pointPour: "Poufsouffle",
             },
             {
                 nomChoix: "Explorer les salles cachées",
-                pointPour: "serpentard",
+                pointPour: "Serpentard",
             },
             {
-                nomChoix: "Tenter de nouveaux sorts",
-                pointPour: "gryffondor",
+                nomChoix: "Aller à la bibliothèque",
+                pointPour: "Serdaigle",
             }
         ]
     },
@@ -129,20 +130,20 @@ export const dataQuestion = [
         question: "Après ta scolarité à Poudlard, quelle ambitions professionnelles aurais-tu ?",
         propositions: [
             {
-                nomChoix: "Botaniste",
-                pointPour: "poufsouffle",
-            },
-            {
                 nomChoix: "Professeur à Poudlard",
-                pointPour: "serdaigle",
+                pointPour: "Serdaigle",
             },
             {
-                nomChoix: "Joueur de Quidditch",
-                pointPour: "serpentard",
+                nomChoix: "Botaniste",
+                pointPour: "Poufsouffle",
             },
             {
                 nomChoix: "Auror",
-                pointPour: "gryffondor",
+                pointPour: "Gryffondor",
+            },
+            {
+                nomChoix: "Joueur de Quidditch",
+                pointPour: "Serpentard",
             }
         ]
     },
@@ -150,20 +151,20 @@ export const dataQuestion = [
         question: "Quelle potion rêverais-tu de préparer ?",
         propositions: [
             {
-                nomChoix: "Philtre de paix",
-                pointPour: "poufsouffle",
-            },
-            {
                 nomChoix: "Philtre d'amour",
-                pointPour: "serdaigle",
+                pointPour: "Serdaigle",
             },
             {
                 nomChoix: "Philtre de Mort Vivante",
-                pointPour: "serpentard",
+                pointPour: "Serpentard",
             },
             {
                 nomChoix: "Solution de force",
-                pointPour: "gryffondor",
+                pointPour: "Gryffondor",
+            },
+            {
+                nomChoix: "Philtre de paix",
+                pointPour: "Poufsouffle",
             }
         ]
     },
@@ -171,20 +172,20 @@ export const dataQuestion = [
         question: "A quoi penses-tu que ressemble ton Patronus ?",
         propositions: [
             {
-                nomChoix: "Chien / Loup",
-                pointPour: "poufsouffle",
+                nomChoix: "Chat / Tigre",
+                pointPour: "Gryffondor",
             },
             {
-                nomChoix: "Oiseau / Rapace",
-                pointPour: "serdaigle",
+                nomChoix: "Chien / Loup",
+                pointPour: "Poufsouffle",
             },
             {
                 nomChoix: "Araignée / Serpent",
-                pointPour: "serpentard",
+                pointPour: "Serpentard",
             },
             {
-                nomChoix: "Chat / Tigre",
-                pointPour: "gryffondor",
+                nomChoix: "Oiseau / Rapace",
+                pointPour: "Serdaigle",
             }
         ]
     },
@@ -192,20 +193,20 @@ export const dataQuestion = [
         question: "C'est Halloween à Poudlard. Que fais-tu ?",
         propositions: [
             {
-                nomChoix: "Manger au buffet",
-                pointPour: "poufsouffle",
+                nomChoix: "Se déguiser en Voldemort et aller faire peur",
+                pointPour: "Serpentard",
             },
             {
                 nomChoix: "Pratiquer tes nouveaux sorts d'effroi",
-                pointPour: "serdaigle",
+                pointPour: "Serdaigle",
             },
             {
-                nomChoix: "Se déguiser en Voldemort et aller faire peur",
-                pointPour: "serpentard",
+                nomChoix: "Manger au buffet",
+                pointPour: "Poufsouffle",
             },
             {
                 nomChoix: "Rendre visite aux fantômes du château",
-                pointPour: "gryffondor",
+                pointPour: "Gryffondor",
             }
         ]
     }
