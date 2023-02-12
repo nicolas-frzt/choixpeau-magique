@@ -1,6 +1,6 @@
 export const dataQuestion = [
     {
-        question: "Parmis les suivantes, quelle est ta couleur préférée ?",
+        question: "Parmi les suivantes, quelle est ta couleur préférée ?",
         propositions: [
             {
                 nomChoix: "Vert",
@@ -21,7 +21,7 @@ export const dataQuestion = [
         ]
     },
     {
-        question: "Parmis les suivantes, quelles sont les qualités qui te représentent le plus ?",
+        question: "Parmi les suivantes, quelles sont les qualités qui te représentent le plus ?",
         propositions: [
             {
                 nomChoix: "La sagesse",
@@ -42,7 +42,7 @@ export const dataQuestion = [
         ]
     },
     {
-        question: "Quel est ton personnage préféré d'Harry Potter parmis :",
+        question: "Quel est ton personnage préféré d'Harry Potter parmi :",
         propositions: [
             {
                 nomChoix: "Cédric Digory",
@@ -106,7 +106,7 @@ export const dataQuestion = [
         ]
     },
     {
-        question: "Tu es seul/e dans Poudlard. Quesqu'y te tenterait le plus parmis :",
+        question: "Tu es seul/e dans Poudlard. Qu'est-ce qui te tenterait le plus parmi :",
         propositions: [
             {
                 nomChoix: "Tenter de nouveaux sorts",
@@ -127,7 +127,7 @@ export const dataQuestion = [
         ]
     },
     {
-        question: "Après ta scolarité à Poudlard, quelle ambitions professionnelles aurais-tu ?",
+        question: "Après ta scolarité à Poudlard, quelle ambition professionnelle aurais-tu ?",
         propositions: [
             {
                 nomChoix: "Professeur à Poudlard",
