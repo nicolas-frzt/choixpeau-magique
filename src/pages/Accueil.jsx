@@ -2,13 +2,15 @@ import "../styles/Accueil.css";
 import { Link } from "react-scroll";
 import TitreTexteCtaImg from "../components/TitreTexteCtaImg";
 import choixpeauVideo from "../assets/Choixpeau-video.mp4";
+import choixpeauImage from "../assets/choixpeau.jpg"
 import Footer from "../components/Footer";
 
 function Accueil({ pageActuelle, updatePageActuelle }) {
     return(
         <div className="accueil">
             <div className="landingPage">
-                <video autoPlay={true} muted={true} src={choixpeauVideo} loop={true}></video>
+                {/* <video autoPlay={true} muted={true} src={choixpeauVideo} loop={true}></video> */}
+                <img src={choixpeauImage} alt="Cérémonie du Choixpeau" />
                 <div className="overlay">
                     <h1>LE CHOIXPEAU</h1>
                     <Link to="ancre">
