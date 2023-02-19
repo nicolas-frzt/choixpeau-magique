@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/choixpeau-magique/static/css/main.d0b83501.css",
-    "main.js": "/choixpeau-magique/static/js/main.4aaebb27.js",
+    "main.js": "/choixpeau-magique/static/js/main.bba185a6.js",
     "static/js/787.52fe251b.chunk.js": "/choixpeau-magique/static/js/787.52fe251b.chunk.js",
     "static/media/logo-choixpeau-magique.png": "/choixpeau-magique/static/media/logo-choixpeau-magique.c6f041b7fecbc6db94bd.png",
     "static/media/gryffondor-son.mp3": "/choixpeau-magique/static/media/gryffondor-son.497fc5ebdd5940f2fc3b.mp3",
@@ -11,11 +11,11 @@
     "static/media/serpentard-son.mp3": "/choixpeau-magique/static/media/serpentard-son.dddaa60a78db8e869971.mp3",
     "index.html": "/choixpeau-magique/index.html",
     "main.d0b83501.css.map": "/choixpeau-magique/static/css/main.d0b83501.css.map",
-    "main.4aaebb27.js.map": "/choixpeau-magique/static/js/main.4aaebb27.js.map",
+    "main.bba185a6.js.map": "/choixpeau-magique/static/js/main.bba185a6.js.map",
     "787.52fe251b.chunk.js.map": "/choixpeau-magique/static/js/787.52fe251b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d0b83501.css",
-    "static/js/main.4aaebb27.js"
+    "static/js/main.bba185a6.js"
   ]
 }
