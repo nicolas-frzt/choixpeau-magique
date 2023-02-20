@@ -1,3 +1,6 @@
+.contact {
+    overflow-x: hidden;
+}
 .contact .container {
     justify-content: center;
     display: flex;
@@ -9,4 +12,16 @@
     justify-content: center;
     align-items: center;
     gap: 10%;
+}
+
+@media screen and (max-width: 970px) {
+    .contact .card-container {
+        gap: 5%;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .contact .card-container {
+        flex-direction: column;
+    }
 }

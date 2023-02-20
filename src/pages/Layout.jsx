@@ -8,7 +8,7 @@ import Questions from "./Questions";
 
 
 function Layout() {
-    const [pageActuelle, updatePageActuelle] = useState('Accueil');
+    const [pageActuelle, updatePageActuelle] = useState('Contact');
     const [maisonFinale, setMaisonFinale] = useState();
     const [nom, setName] = useState('');
     return(

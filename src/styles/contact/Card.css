@@ -60,3 +60,90 @@
     text-decoration: none;
     color: black;
 }
+
+@media screen and (max-width: 1130px) {
+    .card {
+        width: 200px;
+    }   
+    .card .imgBox img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .card {
+        width: 90%;
+        display: flex;
+    }
+    .card .imgBox img {
+        width: 230px;
+        height: 230px;
+        margin-left: 50px;
+    }
+    .card .contenu .details h4 {
+        font-size: 3em;
+        margin-top: 50px;
+    } 
+    .card .contenu .details h5 {
+        font-size: 2em;
+    }
+    .card .contenu .bouttons a{
+        height: 70px;
+        width: 350px;
+        margin-top: 50px;
+        margin-left: 20px;
+        font-size: 2em;
+    } 
+}
+
+@media screen and (max-width: 790px) {
+    .card .contenu .bouttons a{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .card .contenu .bouttons a{
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 673px) {
+    .card .imgBox img {
+        width: 200px;
+        height: 200px;
+        margin-left: 30px;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .card {
+        flex-direction: column;
+        width: 80%;
+        height: 400px;
+    }
+    .card .imgBox img {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .card .contenu .details h4 {
+        font-size: 2em;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .card .contenu .details h5 {
+        display: none;
+    }
+    .card .contenu .bouttons a {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .card .contenu .bouttons a {
+        width: 200px;
+        font-size: 1.5em;
+    }
+}
