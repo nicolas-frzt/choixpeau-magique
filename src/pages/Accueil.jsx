@@ -1,7 +1,6 @@
 import "../styles/Accueil.css";
 import { Link } from "react-scroll";
 import TitreTexteCtaImg from "../components/TitreTexteCtaImg";
-import choixpeauVideo from "../assets/Choixpeau-video.mp4";
 import choixpeauImage from "../assets/choixpeau.jpg"
 import Footer from "../components/Footer";
 
