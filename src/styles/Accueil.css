@@ -36,7 +36,13 @@
     text-align: center;
 }
 
-.accueil .landingPage .overlay i {
+.accueil .landingPage .overlay a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accueil .landingPage .overlay a i {
     color: #fff;
     position: absolute;
     bottom: 40px;
