@@ -43,7 +43,6 @@ footer .otherLinks {
     font-size: 20px;
     display: flex;
     flex-direction: column;
-    gap: 7px
 }
 
 @media screen and (max-width: 1200px) {
