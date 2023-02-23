@@ -9,7 +9,7 @@ function Accueil({ pageActuelle, updatePageActuelle }) {
     return(
         <div className="accueil">
             <div className="landingPage">
-                <video autoPlay={true} muted={true} src={choixpeauVideo} loop={true}></video>
+                <img src="https://www.melty.fr/wp-content/uploads/meltyfr/2022/07/screen-shot-2019-09-11-at-8.25.49-pm.png" alt="Cérémonie du choixpeau magique" />
                 <div className="overlay">
                     <h1>LE CHOIXPEAU</h1>
                     <Link to="ancre">
