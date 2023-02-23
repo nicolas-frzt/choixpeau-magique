@@ -2,7 +2,7 @@ import "../styles/Choixpeau.css";
 import Boutton from "../components/Button"
 import PageUser from "./Page_User";
 
-function Choixpeau({ pageActuelle, updatePageActuelle, maisonFinale, setMaisonFinale, nom, setName }) {
+function Choixpeau({ updatePageActuelle, nom, setName }) {
    
     const handle = () => {
         localStorage.setItem('Name', nom);

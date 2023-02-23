@@ -2,7 +2,7 @@ import choixpeauLogo from '../assets/logo-choixpeau-magique.png';
 import "../styles/NavBar.css"
 import { useState, useEffect } from "react"
 
-function NavBar({ pageActuelle, updatePageActuelle }) {
+function NavBar({ updatePageActuelle }) {
 
     const [width, setWidth] = useState(window.innerWidth);
 

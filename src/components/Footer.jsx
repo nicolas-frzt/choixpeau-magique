@@ -2,7 +2,7 @@ import "../styles/Footer.css";
 import Button from "./Button.jsx";
 
 
-function Footer({ pageActuelle, updatePageActuelle, contactVisible }) {
+function Footer({ updatePageActuelle, contactVisible }) {
     return (
         <footer>
             {contactVisible ? 
