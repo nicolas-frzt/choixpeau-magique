@@ -2,15 +2,11 @@
     position: relative;
 }
 
-.accueil .landingPage img {
+
+.accueil .landingPage video {
     height: 90vh;
     width: 100vw;
     object-fit: cover;
-    /* position: fixed; */
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
     z-index: 0;
 }
 
